@@ -21,4 +21,4 @@ production:
   encoding: utf8
   username: root
   password: 
-  socket: /var/un/mysqld/mysqld.sock      
+  socket: /var/run/mysqld/mysqld.sock      

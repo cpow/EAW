@@ -4,8 +4,7 @@
 
 		
 		<div id="postContent">
-		
-			
+				
 			Posted <%= email.created_at.strftime("%A, %b %d")%> <br />
 
 			<% link_to(email) do %>
@@ -27,7 +26,7 @@
 				skin['ENDCAP_BG_COLOR'] = '#e0ecff';
 				skin['ENDCAP_TEXT_COLOR'] = '#333333';
 				skin['BUTTON_STYLE'] = 'modular';
-				skin['BUTTON_TEXT'] = 'Did you like ths email?';
+				skin['BUTTON_TEXT'] = 'Did you like this email?';
 				skin['BUTTON_ICON'] = 'default';
 				skin['BUTTON_MODULE_PROMO_TEXT'] = 'Let us know...';
 				google.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);
