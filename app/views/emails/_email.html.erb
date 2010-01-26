@@ -7,31 +7,6 @@
 				
 			Posted <%= email.created_at.strftime("%A, %b %d")%> <br />
 			
-			
-			<!-- Include the Google Friend Connect javascript library. -->
-			<script type="text/javascript" src="http://www.google.com/friendconnect/script/friendconnect.js"></script>
-			<!-- Define the div tag where the gadget will be inserted. -->
-			<div id="div-1538314973151396573" style="width:100%;"></div>
-			<!-- Render the gadget into a div. -->
-			<script type="text/javascript">
-			var skin = {};
-			skin['HEIGHT'] = '21';
-			skin['BUTTON_STYLE'] = 'compact';
-			skin['BUTTON_TEXT'] = 'Like this Email';
-			skin['BUTTON_ICON'] = 'default';
-			google.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);
-			google.friendconnect.container.renderOpenSocialGadget(
-			 { id: 'div-1538314973151396573',
-			   url:'http://www.google.com/friendconnect/gadgets/recommended_pages.xml',
-			   height: 21,
-			   site: '11837562349990569265',
-			   'view-params':{"pageUrl":location.href,"pageTitle":"email","docId":"recommendedPages"}
-			 },
-			  skin);
-			</script>
-			<br />
-			
-
 			<% link_to(email) do %>
 			<%= email.comments.count%> comments
 			<%end%>
