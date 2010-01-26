@@ -1,0 +1,2806 @@
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmails (20100112223855)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "emails" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100112223855')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("emails")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-12 17:39:48) [GET]
+
+ActionController::RoutingError (No route matches "/posts" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-12 17:39:54) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/emails
+Rendering emails/index
+Completed in 28ms (View: 24, DB: 0) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#new (for 127.0.0.1 at 2010-01-12 17:41:30) [GET]
+Rendering template within layouts/emails
+Rendering emails/new
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/emails/new]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-12 17:41:33) [GET]
+  [4;35;1mEmail Load (0.3ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/emails
+Rendering emails/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://0.0.0.0/emails]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmails (20100112223855)
+Migrating to CreateComments (20100112230029)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "post_id" integer, "name" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100112230029')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("emails")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmails (20100112223855)
+Migrating to CreateComments (20100112230029)
+Migrating to RemovePostIdFromComments (20100112230909)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100112230909')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("comments")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("emails")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmails (20100112223855)
+Migrating to CreateComments (20100112230029)
+Migrating to RemovePostIdFromComments (20100112230909)
+Migrating to AddEmailIdToComments (20100112230954)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "comments" ADD "email_id" integer[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100112230954')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("emails")[0m
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-12 18:11:11) [GET]
+  [4;36;1mEmail Load (0.3ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/emails
+Rendering emails/index
+Completed in 73ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#new (for 127.0.0.1 at 2010-01-12 18:11:16) [GET]
+Rendering template within layouts/emails
+Rendering emails/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/emails/new]
+
+
+Processing EmailsController#create (for 127.0.0.1 at 2010-01-12 18:11:37) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"SCEwBQp1wbHcG5o9W2VoE4KtTkfvLSF8AEzAMDhZIwk=", "email"=>{"body"=>"So this is the description of the email.\r\n\r\nGuy1@work: Hey I was wondering what happened here.", "title"=>"This is an email"}}
+  [4;35;1mEmail Create (0.4ms)[0m   [0mINSERT INTO "emails" ("created_at", "title", "body", "updated_at") VALUES('2010-01-12 23:11:37', 'This is an email', 'So this is the description of the email.
+
+Guy1@work: Hey I was wondering what happened here.', '2010-01-12 23:11:37')[0m
+Redirected to http://0.0.0.0:3000/emails/1
+Completed in 9ms (DB: 0) | 302 Found [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-12 18:11:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/emails
+Rendering emails/show
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-12 18:11:45) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/emails
+Rendering emails/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (150.6ms)
+Completed in 159ms (View: 155, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-12 18:11:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/emails
+Rendering emails/show
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-12 18:13:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/emails
+Rendering emails/show
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.comments) on line #13 of app/views/emails/show.html.erb:
+10: 	<h2>Comments</h2>
+11: 	
+12: 	<div id="comments">
+13: 		<%= render :partial => @post.comments%>
+14: 	</div>
+15: 	
+16: <fieldset id="new_commen" class="">
+
+    app/views/emails/show.html.erb:13
+    app/controllers/emails_controller.rb:18:in `show'
+
+Rendered rescues/_trace (36.3ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-12 18:14:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/emails
+Rendering emails/show
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+
+ActionView::TemplateError (undefined method `comments_path' for #<ActionView::Base:0x24b4504>) on line #18 of app/views/emails/show.html.erb:
+15: 	
+16: <fieldset id="new_commen" class="">
+17: 	<legend>New Comment</legend>
+18: 	<% form_for [@post, Comment.new] do |f| %>
+19: 		<%= f.error_messages%>
+20: 		<p>
+21: 			
+
+    app/views/emails/show.html.erb:18
+    app/controllers/emails_controller.rb:18:in `show'
+
+Rendered rescues/_trace (91.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-12 18:14:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/emails
+Rendering emails/show
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-12 18:15:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/emails
+Rendering emails/show
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-12 18:16:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/emails
+Rendering emails/show
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2010-01-12 18:18:07) [POST]
+  Parameters: {"comment"=>{"name"=>"Chris", "body"=>"this is a comment on your stupid website\r\n"}, "commit"=>"Add Comment", "authenticity_token"=>"SCEwBQp1wbHcG5o9W2VoE4KtTkfvLSF8AEzAMDhZIwk=", "email_id"=>"1"}
+  [4;36;1mComment Create (0.3ms)[0m   [0;1mINSERT INTO "comments" ("name", "created_at", "body", "updated_at", "post_id", "email_id") VALUES('Chris', '2010-01-12 23:18:07', 'this is a comment on your stupid website
+', '2010-01-12 23:18:07', NULL, NULL)[0m
+
+NoMethodError (undefined method `comment_url' for #<CommentsController:0x24a3c54>):
+  app/controllers/comments_controller.rb:48:in `create'
+  app/controllers/comments_controller.rb:45:in `create'
+
+Rendered rescues/_trace (83.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-12 18:19:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/emails
+Rendering emails/show
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://0.0.0.0/emails/1/]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-12 18:20:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/emails
+Rendering emails/show
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-12 18:20:52) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/emails
+Rendering emails/index
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.1ms)
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/emails/]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-12 18:20:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/emails
+Rendering emails/show
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2010-01-12 18:21:08) [POST]
+  Parameters: {"comment"=>{"name"=>"chris", "body"=>"sdfjnsadf"}, "commit"=>"Add Comment", "authenticity_token"=>"SCEwBQp1wbHcG5o9W2VoE4KtTkfvLSF8AEzAMDhZIwk=", "email_id"=>"1"}
+  [4;36;1mComment Create (0.3ms)[0m   [0;1mINSERT INTO "comments" ("name", "created_at", "body", "updated_at", "post_id", "email_id") VALUES('chris', '2010-01-12 23:21:09', 'sdfjnsadf', '2010-01-12 23:21:09', NULL, NULL)[0m
+
+NoMethodError (undefined method `comment_url' for #<CommentsController:0x24c6a38>):
+  app/controllers/comments_controller.rb:48:in `create'
+  app/controllers/comments_controller.rb:45:in `create'
+
+Rendered rescues/_trace (29.6ms)
+Rendered rescues/_request_and_response (52.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2010-01-12 18:27:01) [POST]
+  Parameters: {"comment"=>{"name"=>"chris", "body"=>"sdfjnsadf"}, "commit"=>"Add Comment", "authenticity_token"=>"SCEwBQp1wbHcG5o9W2VoE4KtTkfvLSF8AEzAMDhZIwk=", "email_id"=>"1"}
+
+SyntaxError (/Users/cpow/Desktop/EAW/app/controllers/comments_controller.rb:77: syntax error, unexpected kEND, expecting $end):
+  
+
+Rendered rescues/_trace (28.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2010-01-12 18:27:14) [POST]
+  Parameters: {"comment"=>{"name"=>"chris", "body"=>"sdfjnsadf"}, "commit"=>"Add Comment", "authenticity_token"=>"SCEwBQp1wbHcG5o9W2VoE4KtTkfvLSF8AEzAMDhZIwk=", "email_id"=>"1"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+  [4;36;1mComment Create (0.4ms)[0m   [0;1mINSERT INTO "comments" ("name", "created_at", "body", "updated_at", "post_id", "email_id") VALUES('chris', '2010-01-12 23:27:14', 'sdfjnsadf', '2010-01-12 23:27:14', NULL, 1)[0m
+Redirected to http://0.0.0.0:3000/emails/1
+Completed in 13ms (DB: 1) | 302 Found [http://0.0.0.0/emails/1/comments]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-12 18:27:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/emails
+Rendering emails/show
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered comments/_comment (0.9ms)
+Completed in 18ms (View: 14, DB: 0) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2010-01-12 18:27:28) [POST]
+  Parameters: {"comment"=>{"name"=>"cpow", "body"=>"Rawrrrr"}, "commit"=>"Add Comment", "authenticity_token"=>"SCEwBQp1wbHcG5o9W2VoE4KtTkfvLSF8AEzAMDhZIwk=", "email_id"=>"1"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+  [4;35;1mComment Create (0.3ms)[0m   [0mINSERT INTO "comments" ("name", "created_at", "body", "updated_at", "post_id", "email_id") VALUES('cpow', '2010-01-12 23:27:28', 'Rawrrrr', '2010-01-12 23:27:28', NULL, 1)[0m
+Redirected to http://0.0.0.0:3000/emails/1
+Completed in 13ms (DB: 0) | 302 Found [http://0.0.0.0/emails/1/comments]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-12 18:27:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/emails
+Rendering emails/show
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered comments/_comment (2.1ms)
+Rendered comments/_comment (0.3ms)
+Completed in 15ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2010-01-12 18:33:54) [GET]
+  Parameters: {"email_id"=>"1"}
+  [4;35;1mComment Load (0.5ms)[0m   [0mSELECT * FROM "comments" [0m
+Rendering template within layouts/comments
+Rendering comments/index
+
+ActionView::TemplateError (undefined method `comment_path' for #<ActionView::Base:0x2440f78>) on line #15 of app/views/comments/index.html.erb:
+12:     <td><%=h comment.post_id %></td>
+13:     <td><%=h comment.name %></td>
+14:     <td><%=h comment.body %></td>
+15:     <td><%= link_to 'Show', comment %></td>
+16:     <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
+17:     <td><%= link_to 'Destroy', comment, :confirm => 'Are you sure?', :method => :delete %></td>
+18:   </tr>
+
+    app/views/comments/index.html.erb:15
+    app/views/comments/index.html.erb:10:in `each'
+    app/views/comments/index.html.erb:10
+    app/controllers/comments_controller.rb:7:in `index'
+
+Rendered rescues/_trace (37.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2010-01-12 18:34:00) [GET]
+  [4;36;1mComment Load (0.6ms)[0m   [0;1mSELECT * FROM "comments" [0m
+Rendering template within layouts/comments
+Rendering comments/index
+
+ActionView::TemplateError (undefined method `comment_path' for #<ActionView::Base:0x256366c>) on line #15 of app/views/comments/index.html.erb:
+12:     <td><%=h comment.post_id %></td>
+13:     <td><%=h comment.name %></td>
+14:     <td><%=h comment.body %></td>
+15:     <td><%= link_to 'Show', comment %></td>
+16:     <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
+17:     <td><%= link_to 'Destroy', comment, :confirm => 'Are you sure?', :method => :delete %></td>
+18:   </tr>
+
+    app/views/comments/index.html.erb:15
+    app/views/comments/index.html.erb:10:in `each'
+    app/views/comments/index.html.erb:10
+    app/controllers/comments_controller.rb:7:in `index'
+
+Rendered rescues/_trace (37.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2010-01-12 18:34:37) [GET]
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" [0m
+Rendering template within layouts/comments
+Rendering comments/index
+
+ActionView::TemplateError (undefined method `comment_path' for #<ActionView::Base:0x240223c>) on line #15 of app/views/comments/index.html.erb:
+12:     <td><%=h comment.email_id %></td>
+13:     <td><%=h comment.name %></td>
+14:     <td><%=h comment.body %></td>
+15:     <td><%= link_to 'Show', comment %></td>
+16:     <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
+17:     <td><%= link_to 'Destroy', comment, :confirm => 'Are you sure?', :method => :delete %></td>
+18:   </tr>
+
+    app/views/comments/index.html.erb:15
+    app/views/comments/index.html.erb:10:in `each'
+    app/views/comments/index.html.erb:10
+    app/controllers/comments_controller.rb:7:in `index'
+
+Rendered rescues/_trace (37.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2010-01-12 18:34:52) [GET]
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT * FROM "comments" [0m
+Rendering template within layouts/comments
+Rendering comments/index
+
+ActionView::TemplateError (undefined method `edit_comment_path' for #<ActionView::Base:0x251b330>) on line #16 of app/views/comments/index.html.erb:
+13:     <td><%=h comment.name %></td>
+14:     <td><%=h comment.body %></td>
+15:     
+16:     <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
+17:     <td><%= link_to 'Destroy', comment, :confirm => 'Are you sure?', :method => :delete %></td>
+18:   </tr>
+19: <% end %>
+
+    app/views/comments/index.html.erb:16
+    app/views/comments/index.html.erb:10:in `each'
+    app/views/comments/index.html.erb:10
+    app/controllers/comments_controller.rb:7:in `index'
+
+Rendered rescues/_trace (87.8ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2010-01-12 18:36:14) [GET]
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" [0m
+Rendering template within layouts/comments
+Rendering comments/index
+
+ActionView::TemplateError (undefined method `comment_path' for #<ActionView::Base:0x262bd24>) on line #15 of app/views/comments/index.html.erb:
+12:     <td><%=h comment.email_id %></td>
+13:     <td><%=h comment.name %></td>
+14:     <td><%=h comment.body %></td>
+15:     <td><%= link_to 'Show', comment %></td>
+16:     <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
+17:     <td><%= link_to 'Destroy', comment, :confirm => 'Are you sure?', :method => :delete %></td>
+18:   </tr>
+
+    app/views/comments/index.html.erb:15
+    app/views/comments/index.html.erb:10:in `each'
+    app/views/comments/index.html.erb:10
+    app/controllers/comments_controller.rb:7:in `index'
+
+Rendered rescues/_trace (36.8ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2010-01-12 18:37:12) [GET]
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT * FROM "comments" [0m
+Rendering template within layouts/comments
+Rendering comments/index
+Completed in 19ms (View: 15, DB: 1) | 200 OK [http://0.0.0.0/comments]
+
+
+Processing CommentsController#index (for 127.0.0.1 at 2010-01-12 20:00:21) [GET]
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" [0m
+Rendering template within layouts/comments
+Rendering comments/index
+Completed in 22ms (View: 18, DB: 1) | 200 OK [http://0.0.0.0/comments]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-12 20:00:27) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/emails
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.4ms)
+Completed in 14ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-12 20:05:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/emails
+Rendering emails/show
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered comments/_comment (2.4ms)
+Rendered comments/_comment (0.3ms)
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-01-12 20:21:14) [GET]
+Rendering site/index
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/site]
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-01-12 20:32:32) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: about, bestof, feedback, home, and submit):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-01-12 20:32:40) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: about, bestof, feedback, home, and submit):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-01-12 20:32:41) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: about, bestof, feedback, home, and submit):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-01-12 20:32:41) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: about, bestof, feedback, home, and submit):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-01-12 20:32:41) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: about, bestof, feedback, home, and submit):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-01-12 20:33:08) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Completed in 10ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/site]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-12 20:33:11) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/emails
+Rendering emails/index
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.3ms)
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-12 20:36:10) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.2ms)
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-12 20:37:14) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.2ms)
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-12 20:39:00) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.2ms)
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-12 20:40:02) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.3ms)
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-12 20:40:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered comments/_comment (2.2ms)
+Rendered comments/_comment (0.4ms)
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-12 20:40:26) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.5ms)
+Completed in 11ms (View: 7, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-12 20:40:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered comments/_comment (2.7ms)
+Rendered comments/_comment (0.5ms)
+Completed in 20ms (View: 14, DB: 1) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-12 20:40:54) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.2ms)
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-12 20:49:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered comments/_comment (2.2ms)
+Rendered comments/_comment (0.4ms)
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-12 20:49:46) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.3ms)
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-12 20:59:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered comments/_comment (2.2ms)
+Rendered comments/_comment (0.4ms)
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-12 20:59:06) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.1ms)
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-12 21:00:33) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.8ms)
+Completed in 66ms (View: 62, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-12 21:00:34) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.3ms)
+Completed in 11ms (View: 7, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing SiteController#index (for 127.0.0.1 at 2010-01-25 18:06:57) [GET]
+Rendering template within layouts/application
+Rendering site/index
+Completed in 108ms (View: 107, DB: 0) | 200 OK [http://0.0.0.0/site]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 18:07:10) [GET]
+  [4;36;1mEmail Load (0.6ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (20.5ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (227.7ms)
+Completed in 282ms (View: 219, DB: 21) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-25 18:07:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered comments/_comment (1.2ms)
+Rendered comments/_comment (0.4ms)
+Completed in 25ms (View: 19, DB: 1) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 18:07:19) [GET]
+  [4;35;1mEmail Load (0.4ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.2ms)
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-25 18:07:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered comments/_comment (2.1ms)
+Rendered comments/_comment (0.4ms)
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 18:07:32) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.1ms)
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 18:09:46) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.6ms)
+Completed in 17ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing SiteController#about (for 127.0.0.1 at 2010-01-25 18:09:47) [GET]
+Rendering template within layouts/application
+Rendering site/about
+Completed in 21ms (View: 20, DB: 0) | 200 OK [http://0.0.0.0/site/about]
+
+
+Processing SiteController#bestof (for 127.0.0.1 at 2010-01-25 18:09:48) [GET]
+Rendering template within layouts/application
+Rendering site/bestof
+Completed in 59ms (View: 58, DB: 0) | 200 OK [http://0.0.0.0/site/bestof]
+
+
+Processing SiteController#submit (for 127.0.0.1 at 2010-01-25 18:09:49) [GET]
+Rendering template within layouts/application
+Rendering site/submit
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/site/submit]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 18:09:50) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.3ms)
+Completed in 11ms (View: 7, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 18:12:52) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (6.3ms)
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 18:15:08) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.8ms)
+Completed in 14ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 18:17:26) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.7ms)
+Completed in 14ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 18:18:47) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.6ms)
+Completed in 14ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 18:19:31) [GET]
+  [4;36;1mEmail Load (0.5ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (7.3ms)
+Completed in 70ms (View: 65, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 18:19:34) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.4ms)
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 18:19:51) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.9ms)
+Completed in 15ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 18:20:12) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.8ms)
+Completed in 14ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 18:20:40) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.7ms)
+Completed in 15ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 18:21:24) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.2ms)
+Completed in 11ms (View: 7, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing SiteController#about (for 127.0.0.1 at 2010-01-25 18:21:39) [GET]
+Rendering template within layouts/application
+Rendering site/about
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/site/about]
+
+
+Processing SiteController#bestof (for 127.0.0.1 at 2010-01-25 18:21:39) [GET]
+Rendering template within layouts/application
+Rendering site/bestof
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/site/bestof]
+
+
+Processing SiteController#submit (for 127.0.0.1 at 2010-01-25 18:21:40) [GET]
+Rendering template within layouts/application
+Rendering site/submit
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/site/submit]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 18:21:41) [GET]
+  [4;36;1mEmail Load (0.5ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.6ms)
+Completed in 63ms (View: 8, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 18:33:51) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.5ms)
+Completed in 17ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 18:33:51) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/scriptaculous.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 18:33:51) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/scriptaculous.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing EmailsController#new (for 127.0.0.1 at 2010-01-25 18:33:56) [GET]
+Rendering template within layouts/application
+Rendering emails/new
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/emails/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 18:33:56) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/scriptaculous.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 18:33:56) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/scriptaculous.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 18:33:56) [GET]
+  Parameters: {"1264451546"=>nil}
+
+ActionController::RoutingError (No route matches "/javascripts/tiny_mce/plugins/imagemanager/editor_plugin.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 18:33:56) [GET]
+  Parameters: {"1264451546"=>nil}
+
+ActionController::RoutingError (No route matches "/javascripts/tiny_mce/plugins/filemanager/editor_plugin.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing EmailsController#new (for 127.0.0.1 at 2010-01-25 18:34:07) [GET]
+Rendering template within layouts/application
+Rendering emails/new
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/emails/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 18:34:07) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/scriptaculous.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 18:34:08) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/scriptaculous.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 18:34:08) [GET]
+  Parameters: {"1264451546"=>nil}
+
+ActionController::RoutingError (No route matches "/javascripts/tiny_mce/plugins/filemanager/editor_plugin.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 18:34:08) [GET]
+  Parameters: {"1264451546"=>nil}
+
+ActionController::RoutingError (No route matches "/javascripts/tiny_mce/plugins/imagemanager/editor_plugin.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing EmailsController#new (for 127.0.0.1 at 2010-01-25 18:35:04) [GET]
+Rendering template within layouts/application
+Rendering emails/new
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/emails/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 18:35:04) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/scriptaculous.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 18:35:04) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/scriptaculous.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 18:35:04) [GET]
+  Parameters: {"1264451546"=>nil}
+
+ActionController::RoutingError (No route matches "/javascripts/tiny_mce/plugins/imagemanager/editor_plugin.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 18:35:04) [GET]
+  Parameters: {"1264451546"=>nil}
+
+ActionController::RoutingError (No route matches "/javascripts/tiny_mce/plugins/filemanager/editor_plugin.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing EmailsController#new (for 127.0.0.1 at 2010-01-25 18:36:43) [GET]
+Rendering template within layouts/application
+Rendering emails/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://0.0.0.0/emails/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 18:36:43) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/scriptaculous.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 18:36:43) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/scriptaculous.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 18:36:43) [GET]
+  Parameters: {"1264451546"=>nil}
+
+ActionController::RoutingError (No route matches "/javascripts/tiny_mce/plugins/imagemanager/editor_plugin.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 18:36:43) [GET]
+  Parameters: {"1264451546"=>nil}
+
+ActionController::RoutingError (No route matches "/javascripts/tiny_mce/plugins/filemanager/editor_plugin.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing EmailsController#new (for 127.0.0.1 at 2010-01-25 18:37:17) [GET]
+Rendering template within layouts/application
+Rendering emails/new
+Completed in 34ms (View: 25, DB: 0) | 200 OK [http://0.0.0.0/emails/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 18:37:17) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/scriptaculous.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 18:37:18) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/scriptaculous.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 18:37:18) [GET]
+  Parameters: {"1264451546"=>nil}
+
+ActionController::RoutingError (No route matches "/javascripts/tiny_mce/plugins/filemanager/editor_plugin.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 18:37:18) [GET]
+  Parameters: {"1264451546"=>nil}
+
+ActionController::RoutingError (No route matches "/javascripts/tiny_mce/plugins/imagemanager/editor_plugin.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing EmailsController#new (for 127.0.0.1 at 2010-01-25 18:40:22) [GET]
+Rendering template within layouts/application
+Rendering emails/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://0.0.0.0/emails/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 18:40:22) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/scriptaculous.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 18:40:22) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/scriptaculous.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 18:40:22) [GET]
+  Parameters: {"1264451546"=>nil}
+
+ActionController::RoutingError (No route matches "/javascripts/tiny_mce/plugins/imagemanager/editor_plugin.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 18:40:22) [GET]
+  Parameters: {"1264451546"=>nil}
+
+ActionController::RoutingError (No route matches "/javascripts/tiny_mce/plugins/filemanager/editor_plugin.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing EmailsController#new (for 127.0.0.1 at 2010-01-25 18:40:26) [GET]
+Rendering template within layouts/application
+Rendering emails/new
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/emails/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 18:40:27) [GET]
+  Parameters: {"1264451546"=>nil}
+
+ActionController::RoutingError (No route matches "/javascripts/tiny_mce/plugins/imagemanager/editor_plugin.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 18:40:27) [GET]
+  Parameters: {"1264451546"=>nil}
+
+ActionController::RoutingError (No route matches "/javascripts/tiny_mce/plugins/filemanager/editor_plugin.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing EmailsController#new (for 127.0.0.1 at 2010-01-25 18:42:53) [GET]
+Rendering template within layouts/application
+Rendering emails/new
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/emails/new]
+
+
+Processing EmailsController#new (for 127.0.0.1 at 2010-01-25 19:25:42) [GET]
+Rendering template within layouts/application
+Rendering emails/new
+Completed in 50ms (View: 46, DB: 0) | 200 OK [http://0.0.0.0/emails/new]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 19:26:09) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (43.3ms)
+Completed in 82ms (View: 78, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 19:31:06) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.5ms)
+
+ActionView::TemplateError (undefined local variable or method `init_tiny_mce_hammer_if_required' for #<ActionView::Base:0x11ccc20>) on line #9 of app/views/layouts/application.html.erb:
+6:   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+7:   <title>Site: <%= controller.action_name %></title>
+8:   <%= stylesheet_link_tag 'site.css' %>
+9:   <%= init_tiny_mce_hammer_if_required %>
+10:   <%= javascript_include_tag "prototype" %>
+11: 
+12: </head>
+
+    app/views/layouts/application.html.erb:9
+    app/controllers/emails_controller.rb:7:in `index'
+
+Rendered rescues/_trace (35.9ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 19:31:53) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.2ms)
+
+ActionView::TemplateError (undefined local variable or method `init_tinymce_hammer_if_required' for #<ActionView::Base:0x2570b00>) on line #9 of app/views/layouts/application.html.erb:
+6:   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+7:   <title>Site: <%= controller.action_name %></title>
+8:   <%= stylesheet_link_tag 'site.css' %>
+9:   <%= init_tinymce_hammer_if_required %>
+10:   <%= javascript_include_tag "prototype" %>
+11: 
+12: </head>
+
+    app/views/layouts/application.html.erb:9
+    app/controllers/emails_controller.rb:7:in `index'
+
+Rendered rescues/_trace (39.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 19:31:54) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.3ms)
+
+ActionView::TemplateError (undefined local variable or method `init_tinymce_hammer_if_required' for #<ActionView::Base:0x266f880>) on line #9 of app/views/layouts/application.html.erb:
+6:   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+7:   <title>Site: <%= controller.action_name %></title>
+8:   <%= stylesheet_link_tag 'site.css' %>
+9:   <%= init_tinymce_hammer_if_required %>
+10:   <%= javascript_include_tag "prototype" %>
+11: 
+12: </head>
+
+    app/views/layouts/application.html.erb:9
+    app/controllers/emails_controller.rb:7:in `index'
+
+Rendered rescues/_trace (34.8ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 19:31:55) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.2ms)
+
+ActionView::TemplateError (undefined local variable or method `init_tinymce_hammer_if_required' for #<ActionView::Base:0x251c1a4>) on line #9 of app/views/layouts/application.html.erb:
+6:   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+7:   <title>Site: <%= controller.action_name %></title>
+8:   <%= stylesheet_link_tag 'site.css' %>
+9:   <%= init_tinymce_hammer_if_required %>
+10:   <%= javascript_include_tag "prototype" %>
+11: 
+12: </head>
+
+    app/views/layouts/application.html.erb:9
+    app/controllers/emails_controller.rb:7:in `index'
+
+Rendered rescues/_trace (87.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 19:32:18) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.4ms)
+
+ActionView::TemplateError (undefined local variable or method `init_tinymce_hammer_if_required' for #<ActionView::Base:0x262f294>) on line #9 of app/views/layouts/application.html.erb:
+6:   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+7:   <title>Site: <%= controller.action_name %></title>
+8:   <%= stylesheet_link_tag 'site.css' %>
+9:   <%= init_tinymce_hammer_if_required %>
+10:   <%= javascript_include_tag "prototype" %>
+11: 
+12: </head>
+
+    app/views/layouts/application.html.erb:9
+    app/controllers/emails_controller.rb:7:in `index'
+
+Rendered rescues/_trace (34.8ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 19:33:23) [GET]
+  [4;36;1mEmail Load (0.4ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.2ms)
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#new (for 127.0.0.1 at 2010-01-25 19:33:26) [GET]
+Rendering template within layouts/application
+Rendering emails/new
+
+ActionView::TemplateError (undefined local variable or method `init_tinymce_hammer_if_required' for #<ActionView::Base:0x246ef18>) on line #3 of app/views/emails/new.html.erb:
+1: <h1>New email</h1>
+2: 
+3: <%= init_tinymce_hammer_if_required %>
+4: 
+5: <% form_for(@email) do |f| %>
+6:  
+
+    app/views/emails/new.html.erb:3
+    app/controllers/emails_controller.rb:29:in `new'
+
+Rendered rescues/_trace (34.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#new (for 127.0.0.1 at 2010-01-25 19:33:35) [GET]
+Rendering template within layouts/application
+Rendering emails/new
+
+ActionView::TemplateError (undefined method `tinymce' for #<ActionView::Helpers::FormBuilder:0x2546c10>) on line #15 of app/views/emails/new.html.erb:
+12:   </p>
+13:   <p>
+14:     <%= f.label :body %><br />
+15:     <%= f.tinymce :body %>
+16:   </p>
+17:   <p>
+18:     <%= f.submit 'Create' %>
+
+    app/views/emails/new.html.erb:15
+    app/views/emails/new.html.erb:5
+    app/controllers/emails_controller.rb:29:in `new'
+
+Rendered rescues/_trace (35.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#new (for 127.0.0.1 at 2010-01-25 19:37:20) [GET]
+Rendering template within layouts/application
+Rendering emails/new
+
+ActionView::TemplateError (undefined local variable or method `init_tinymce_hammer_if_required' for #<ActionView::Base:0x242f854>) on line #3 of app/views/emails/new.html.erb:
+1: <h1>New email</h1>
+2: 
+3: <%= init_tinymce_hammer_if_required %>
+4: 
+5: <% form_for(@email) do |f| %>
+6:  
+
+    app/views/emails/new.html.erb:3
+    app/controllers/emails_controller.rb:29:in `new'
+
+Rendered rescues/_trace (34.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#new (for 127.0.0.1 at 2010-01-25 19:37:21) [GET]
+Rendering template within layouts/application
+Rendering emails/new
+
+ActionView::TemplateError (undefined local variable or method `init_tinymce_hammer_if_required' for #<ActionView::Base:0x2533d40>) on line #3 of app/views/emails/new.html.erb:
+1: <h1>New email</h1>
+2: 
+3: <%= init_tinymce_hammer_if_required %>
+4: 
+5: <% form_for(@email) do |f| %>
+6:  
+
+    app/views/emails/new.html.erb:3
+    app/controllers/emails_controller.rb:29:in `new'
+
+Rendered rescues/_trace (34.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#new (for 127.0.0.1 at 2010-01-25 19:37:46) [GET]
+Rendering template within layouts/application
+Rendering emails/new
+
+ActionView::TemplateError (undefined method `tinymce' for #<ActionView::Helpers::FormBuilder:0x262cd78>) on line #15 of app/views/emails/new.html.erb:
+12:   </p>
+13:   <p>
+14:     <%= f.label :body %><br />
+15:     <%= f.tinymce :body %>
+16:   </p>
+17:   <p>
+18:     <%= f.submit 'Create' %>
+
+    app/views/emails/new.html.erb:15
+    app/views/emails/new.html.erb:5
+    app/controllers/emails_controller.rb:29:in `new'
+
+Rendered rescues/_trace (35.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#new (for 127.0.0.1 at 2010-01-25 19:43:26) [GET]
+Rendering template within layouts/application
+Rendering emails/new
+Completed in 33ms (View: 23, DB: 0) | 200 OK [http://0.0.0.0/emails/new]
+
+
+Processing Tinymce::HammerController#combine (for 127.0.0.1 at 2010-01-25 19:43:26) [GET]
+Completed in 6ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/javascripts/tinymce_hammer.js]
+
+
+Processing EmailsController#create (for 127.0.0.1 at 2010-01-25 19:44:48) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"ynK7IVDTY7kHHXwQMU6116TDeS/rHKzS8hBJfhEjUGU=", "email"=>{"body"=>"<p>p{color:red} heyooo</p>", "title"=>"something"}}
+  [4;36;1mEmail Create (0.4ms)[0m   [0;1mINSERT INTO "emails" ("created_at", "title", "body", "updated_at") VALUES('2010-01-26 00:44:48', 'something', '<p>p{color:red} heyooo</p>', '2010-01-26 00:44:48')[0m
+Redirected to http://0.0.0.0:3000/emails/2
+Completed in 9ms (DB: 0) | 302 Found [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-25 19:44:48) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mEmail Load (0.3ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".email_id = 2) [0m
+Completed in 94ms (View: 54, DB: 0) | 200 OK [http://0.0.0.0/emails/2]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-25 19:45:16) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".email_id = 2) [0m
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/emails/2]
+
+
+Processing EmailsController#new (for 127.0.0.1 at 2010-01-25 19:45:22) [GET]
+Rendering template within layouts/application
+Rendering emails/new
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/emails/new]
+
+
+Processing Tinymce::HammerController#combine (for 127.0.0.1 at 2010-01-25 19:45:22) [GET]
+Completed in 9ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/javascripts/tinymce_hammer.js]
+
+
+Processing EmailsController#create (for 127.0.0.1 at 2010-01-25 19:45:29) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"ynK7IVDTY7kHHXwQMU6116TDeS/rHKzS8hBJfhEjUGU=", "email"=>{"body"=>"<p>heyoooo</p>", "title"=>"dzsbdf"}}
+  [4;35;1mEmail Create (0.3ms)[0m   [0mINSERT INTO "emails" ("created_at", "title", "body", "updated_at") VALUES('2010-01-26 00:45:29', 'dzsbdf', '<p>heyoooo</p>', '2010-01-26 00:45:29')[0m
+Redirected to http://0.0.0.0:3000/emails/3
+Completed in 9ms (DB: 0) | 302 Found [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-25 19:45:29) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".email_id = 3) [0m
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/emails/3]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-25 19:46:10) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".email_id = 3) [0m
+Completed in 18ms (View: 13, DB: 0) | 200 OK [http://0.0.0.0/emails/3]
+
+
+Processing EmailsController#new (for 127.0.0.1 at 2010-01-25 19:46:17) [GET]
+Rendering template within layouts/application
+Rendering emails/new
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/emails/new]
+
+
+Processing Tinymce::HammerController#combine (for 127.0.0.1 at 2010-01-25 19:46:17) [GET]
+Completed in 9ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/javascripts/tinymce_hammer.js]
+
+
+Processing EmailsController#create (for 127.0.0.1 at 2010-01-25 19:46:20) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"ynK7IVDTY7kHHXwQMU6116TDeS/rHKzS8hBJfhEjUGU=", "email"=>{"body"=>"<p>asdfasdfgsdfg</p>", "title"=>"asdfasdf"}}
+  [4;36;1mEmail Create (0.3ms)[0m   [0;1mINSERT INTO "emails" ("created_at", "title", "body", "updated_at") VALUES('2010-01-26 00:46:20', 'asdfasdf', '<p>asdfasdfgsdfg</p>', '2010-01-26 00:46:20')[0m
+Redirected to http://0.0.0.0:3000/emails/4
+Completed in 8ms (DB: 0) | 302 Found [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-25 19:46:20) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".email_id = 4) [0m
+Completed in 58ms (View: 53, DB: 0) | 200 OK [http://0.0.0.0/emails/4]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-25 19:46:46) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".email_id = 4) [0m
+Completed in 18ms (View: 13, DB: 0) | 200 OK [http://0.0.0.0/emails/4]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 19:46:49) [GET]
+  [4;35;1mEmail Load (0.5ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.9ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.3ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.3ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.3ms)
+Completed in 22ms (View: 18, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 19:46:57) [GET]
+  [4;36;1mEmail Load (0.5ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.3ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.3ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.3ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.4ms)
+Completed in 16ms (View: 12, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-25 19:47:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.4ms)
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 19:47:47) [GET]
+  [4;36;1mEmail Load (0.6ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (6.3ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.4ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.3ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.4ms)
+Completed in 72ms (View: 66, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-25 19:47:58) [GET]
+  Parameters: {"id"=>"index"}
+  [4;35;1mEmail Load (0.1ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Email with ID=index):
+  app/controllers/emails_controller.rb:16:in `show'
+
+Rendered rescues/_trace (27.1ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-25 19:48:23) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".email_id = 2) [0m
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/emails/2]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 19:48:30) [GET]
+  [4;35;1mEmail Load (0.6ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.1ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.3ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.3ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.3ms)
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#new (for 127.0.0.1 at 2010-01-25 19:48:35) [GET]
+Rendering template within layouts/application
+Rendering emails/new
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/emails/new]
+
+
+Processing Tinymce::HammerController#combine (for 127.0.0.1 at 2010-01-25 19:48:35) [GET]
+Completed in 63ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/javascripts/tinymce_hammer.js]
+
+
+Processing EmailsController#create (for 127.0.0.1 at 2010-01-25 19:52:15) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"ynK7IVDTY7kHHXwQMU6116TDeS/rHKzS8hBJfhEjUGU=", "email"=>{"body"=>"<p>something</p>", "title"=>"dffgdsgfdsfgds"}}
+  [4;36;1mEmail Create (0.3ms)[0m   [0;1mINSERT INTO "emails" ("created_at", "title", "body", "updated_at") VALUES('2010-01-26 00:52:15', 'dffgdsgfdsfgds', '<p>something</p>', '2010-01-26 00:52:15')[0m
+Redirected to http://0.0.0.0:3000/emails/5
+Completed in 9ms (DB: 0) | 302 Found [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-25 19:52:15) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".email_id = 5) [0m
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/emails/5]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 19:52:17) [GET]
+  [4;36;1mEmail Load (0.5ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.8ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.3ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.4ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.4ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.3ms)
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 19:53:02) [GET]
+  [4;36;1mEmail Load (0.5ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.8ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.4ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.4ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.4ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.3ms)
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-25 19:53:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered comments/_comment (2.2ms)
+Rendered comments/_comment (0.4ms)
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 19:53:26) [GET]
+  [4;35;1mEmail Load (0.5ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.4ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.4ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.4ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.4ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.4ms)
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-25 19:53:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered comments/_comment (2.1ms)
+Rendered comments/_comment (0.3ms)
+Completed in 17ms (View: 12, DB: 0) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-25 19:54:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered comments/_comment (2.1ms)
+Rendered comments/_comment (0.4ms)
+Completed in 17ms (View: 12, DB: 0) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#edit (for 127.0.0.1 at 2010-01-25 19:54:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/edit
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/emails/1/edit]
+
+
+Processing Tinymce::HammerController#combine (for 127.0.0.1 at 2010-01-25 19:54:09) [GET]
+Completed in 55ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/javascripts/tinymce_hammer.js]
+
+
+Processing EmailsController#edit (for 127.0.0.1 at 2010-01-25 19:57:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/edit
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/emails/1/edit]
+
+
+Processing Tinymce::HammerController#combine (for 127.0.0.1 at 2010-01-25 19:57:34) [GET]
+Completed in 8ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/javascripts/tinymce_hammer.js]
+
+
+Processing EmailsController#edit (for 127.0.0.1 at 2010-01-25 19:57:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/edit
+Completed in 34ms (View: 24, DB: 0) | 200 OK [http://0.0.0.0/emails/1/edit]
+
+
+Processing Tinymce::HammerController#combine (for 127.0.0.1 at 2010-01-25 19:57:44) [GET]
+
+Errno::ENOENT (No such file or directory - /Users/cpow/Desktop/EAW/public/javascripts/lib/tiny_mce/tiny_mce.js):
+  vendor/plugins/tinymce_hammer/app/controllers/tinymce/hammer_controller.rb:96:in `read'
+  vendor/plugins/tinymce_hammer/app/controllers/tinymce/hammer_controller.rb:96:in `add_content'
+  vendor/plugins/tinymce_hammer/app/controllers/tinymce/hammer_controller.rb:33:in `combine'
+
+Rendered rescues/_trace (64.1ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#edit (for 127.0.0.1 at 2010-01-25 19:57:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/edit
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/emails/1/edit]
+
+
+Processing Tinymce::HammerController#combine (for 127.0.0.1 at 2010-01-25 19:57:46) [GET]
+
+Errno::ENOENT (No such file or directory - /Users/cpow/Desktop/EAW/public/javascripts/lib/tiny_mce/tiny_mce.js):
+  vendor/plugins/tinymce_hammer/app/controllers/tinymce/hammer_controller.rb:96:in `read'
+  vendor/plugins/tinymce_hammer/app/controllers/tinymce/hammer_controller.rb:96:in `add_content'
+  vendor/plugins/tinymce_hammer/app/controllers/tinymce/hammer_controller.rb:33:in `combine'
+
+Rendered rescues/_trace (28.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#edit (for 127.0.0.1 at 2010-01-25 19:58:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/edit
+Completed in 50ms (View: 44, DB: 0) | 200 OK [http://0.0.0.0/emails/1/edit]
+
+
+Processing Tinymce::HammerController#combine (for 127.0.0.1 at 2010-01-25 19:58:01) [GET]
+
+Errno::ENOENT (No such file or directory - /Users/cpow/Desktop/EAW/public/javascripts/lib/tiny_mce/tiny_mce.js):
+  vendor/plugins/tinymce_hammer/app/controllers/tinymce/hammer_controller.rb:96:in `read'
+  vendor/plugins/tinymce_hammer/app/controllers/tinymce/hammer_controller.rb:96:in `add_content'
+  vendor/plugins/tinymce_hammer/app/controllers/tinymce/hammer_controller.rb:33:in `combine'
+
+Rendered rescues/_trace (28.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#edit (for 127.0.0.1 at 2010-01-25 19:58:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/edit
+Completed in 34ms (View: 24, DB: 0) | 200 OK [http://0.0.0.0/emails/1/edit]
+
+
+Processing Tinymce::HammerController#combine (for 127.0.0.1 at 2010-01-25 19:58:09) [GET]
+Completed in 10ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/javascripts/tinymce_hammer.js]
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2010-01-25 19:58:59) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"ynK7IVDTY7kHHXwQMU6116TDeS/rHKzS8hBJfhEjUGU=", "id"=>"1", "email"=>{"body"=>"<p>So this is the description of the email.</p>\r\n<p>&nbsp;</p>\r\n<p><i><strong>Guy1@work:</strong></i> Hey I was wondering what happened here.</p>", "title"=>"This is an email"}}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+  [4;36;1mEmail Update (0.3ms)[0m   [0;1mUPDATE "emails" SET "updated_at" = '2010-01-26 00:58:59', "body" = '<p>So this is the description of the email.</p>
+<p>&nbsp;</p>
+<p><i><strong>Guy1@work:</strong></i> Hey I was wondering what happened here.</p>' WHERE "id" = 1[0m
+Redirected to http://0.0.0.0:3000/emails/1
+Completed in 10ms (DB: 0) | 302 Found [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-25 19:58:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.4ms)
+Completed in 99ms (View: 93, DB: 1) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 19:59:03) [GET]
+  [4;36;1mEmail Load (0.5ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (6.5ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.4ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.4ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.3ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.4ms)
+Completed in 25ms (View: 20, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-25 19:59:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered comments/_comment (2.2ms)
+Rendered comments/_comment (0.4ms)
+Completed in 62ms (View: 57, DB: 1) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#edit (for 127.0.0.1 at 2010-01-25 19:59:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/edit
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/emails/1/edit]
+
+
+Processing Tinymce::HammerController#combine (for 127.0.0.1 at 2010-01-25 19:59:14) [GET]
+Completed in 4ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/javascripts/tinymce_hammer.js]
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2010-01-25 19:59:25) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"ynK7IVDTY7kHHXwQMU6116TDeS/rHKzS8hBJfhEjUGU=", "id"=>"1", "email"=>{"body"=>"<p>So this is the description of the email.</p>\r\n<p><strong>Guy1@work:</strong> Hey I was wondering what happened here.</p>", "title"=>"This is an email"}}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+  [4;35;1mEmail Update (0.3ms)[0m   [0mUPDATE "emails" SET "updated_at" = '2010-01-26 00:59:25', "body" = '<p>So this is the description of the email.</p>
+<p><strong>Guy1@work:</strong> Hey I was wondering what happened here.</p>' WHERE "id" = 1[0m
+Redirected to http://0.0.0.0:3000/emails/1
+Completed in 11ms (DB: 0) | 302 Found [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-25 19:59:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered comments/_comment (2.1ms)
+Rendered comments/_comment (0.4ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 19:59:43) [GET]
+  [4;35;1mEmail Load (0.5ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.3ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.3ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.3ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.3ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.3ms)
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing SiteController#about (for 127.0.0.1 at 2010-01-25 19:59:45) [GET]
+Rendering template within layouts/application
+Rendering site/about
+Completed in 53ms (View: 51, DB: 0) | 200 OK [http://0.0.0.0/site/about]
+
+
+Processing SiteController#bestof (for 127.0.0.1 at 2010-01-25 19:59:45) [GET]
+Rendering template within layouts/application
+Rendering site/bestof
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/site/bestof]
+
+
+Processing SiteController#submit (for 127.0.0.1 at 2010-01-25 19:59:46) [GET]
+Rendering template within layouts/application
+Rendering site/submit
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/site/submit]
+
+
+Processing SiteController#bestof (for 127.0.0.1 at 2010-01-25 19:59:46) [GET]
+Rendering template within layouts/application
+Rendering site/bestof
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/site/bestof]
+
+
+Processing SiteController#about (for 127.0.0.1 at 2010-01-25 19:59:47) [GET]
+Rendering template within layouts/application
+Rendering site/about
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/site/about]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 19:59:47) [GET]
+  [4;35;1mEmail Load (0.5ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.4ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.3ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.3ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.3ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.5ms)
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 20:00:28) [GET]
+  [4;35;1mEmail Load (0.6ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.9ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.4ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.3ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.4ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.4ms)
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing SiteController#about (for 127.0.0.1 at 2010-01-25 20:00:54) [GET]
+Rendering template within layouts/application
+Rendering site/about
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/site/about]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 20:00:55) [GET]
+  [4;35;1mEmail Load (0.6ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.8ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.4ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.4ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.3ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.4ms)
+Completed in 20ms (View: 14, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing SiteController#bestof (for 127.0.0.1 at 2010-01-25 20:00:56) [GET]
+Rendering template within layouts/application
+Rendering site/bestof
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/site/bestof]
+
+
+Processing SiteController#about (for 127.0.0.1 at 2010-01-25 20:00:56) [GET]
+Rendering template within layouts/application
+Rendering site/about
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/site/about]
+
+
+Processing SiteController#about (for 127.0.0.1 at 2010-01-25 20:01:26) [GET]
+Rendering template within layouts/application
+Rendering site/about
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/site/about]
+
+
+Processing SiteController#bestof (for 127.0.0.1 at 2010-01-25 20:01:31) [GET]
+Rendering template within layouts/application
+Rendering site/bestof
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/site/bestof]
+
+
+Processing SiteController#submit (for 127.0.0.1 at 2010-01-25 20:01:32) [GET]
+Rendering template within layouts/application
+Rendering site/submit
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/site/submit]
+
+
+Processing SiteController#bestof (for 127.0.0.1 at 2010-01-25 20:01:34) [GET]
+Rendering template within layouts/application
+Rendering site/bestof
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/site/bestof]
+
+
+Processing SiteController#submit (for 127.0.0.1 at 2010-01-25 20:01:34) [GET]
+Rendering template within layouts/application
+Rendering site/submit
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/site/submit]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 20:01:39) [GET]
+  [4;35;1mEmail Load (0.5ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.4ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.4ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.4ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.4ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.4ms)
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing SiteController#about (for 127.0.0.1 at 2010-01-25 20:02:44) [GET]
+Rendering template within layouts/application
+Rendering site/about
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/site/about]
+
+
+Processing SiteController#bestof (for 127.0.0.1 at 2010-01-25 20:02:44) [GET]
+Rendering template within layouts/application
+Rendering site/bestof
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/site/bestof]
+
+
+Processing SiteController#submit (for 127.0.0.1 at 2010-01-25 20:02:45) [GET]
+Rendering template within layouts/application
+Rendering site/submit
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/site/submit]
+
+
+Processing SiteController#about (for 127.0.0.1 at 2010-01-25 20:02:46) [GET]
+Rendering template within layouts/application
+Rendering site/about
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/site/about]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 20:02:46) [GET]
+  [4;35;1mEmail Load (0.5ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.3ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.4ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.3ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.4ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.3ms)
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-25 20:03:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered comments/_comment (2.1ms)
+Rendered comments/_comment (0.4ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#edit (for 127.0.0.1 at 2010-01-25 20:03:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/edit
+Completed in 57ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/emails/1/edit]
+
+
+Processing Tinymce::HammerController#combine (for 127.0.0.1 at 2010-01-25 20:03:46) [GET]
+Completed in 7ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/javascripts/tinymce_hammer.js]
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2010-01-25 20:10:57) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"ynK7IVDTY7kHHXwQMU6116TDeS/rHKzS8hBJfhEjUGU=", "id"=>"1", "email"=>{"body"=>"<p><img src=\"http://s3.photobucket.com/albums/y63/cpow85/?action=view&amp;current=therock07.jpg\" alt=\"something\" width=\"100\" height=\"150\" /></p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Guy1@work:</strong></p>", "title"=>"This is an email"}}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+  [4;36;1mEmail Update (0.3ms)[0m   [0;1mUPDATE "emails" SET "updated_at" = '2010-01-26 01:10:57', "body" = '<p><img src="http://s3.photobucket.com/albums/y63/cpow85/?action=view&amp;current=therock07.jpg" alt="something" width="100" height="150" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Guy1@work:</strong></p>' WHERE "id" = 1[0m
+Redirected to http://0.0.0.0:3000/emails/1
+Completed in 10ms (DB: 0) | 302 Found [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-25 20:10:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered comments/_comment (2.3ms)
+Rendered comments/_comment (0.4ms)
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-25 20:11:05) [GET]
+  Parameters: {"id"=>"1edit"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered comments/_comment (2.1ms)
+Rendered comments/_comment (0.4ms)
+Completed in 17ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/emails/1edit]
+
+
+Processing EmailsController#edit (for 127.0.0.1 at 2010-01-25 20:11:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/edit
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/emails/1/edit]
+
+
+Processing Tinymce::HammerController#combine (for 127.0.0.1 at 2010-01-25 20:11:09) [GET]
+Completed in 53ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/javascripts/tinymce_hammer.js]
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2010-01-25 20:11:23) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"ynK7IVDTY7kHHXwQMU6116TDeS/rHKzS8hBJfhEjUGU=", "id"=>"1", "email"=>{"body"=>"<p><strong>Guy1@work:</strong></p>", "title"=>"This is an email"}}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+  [4;35;1mEmail Update (0.2ms)[0m   [0mUPDATE "emails" SET "updated_at" = '2010-01-26 01:11:23', "body" = '<p><strong>Guy1@work:</strong></p>' WHERE "id" = 1[0m
+Redirected to http://0.0.0.0:3000/emails/1
+Completed in 10ms (DB: 0) | 302 Found [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-25 20:11:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered comments/_comment (2.2ms)
+Rendered comments/_comment (0.4ms)
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 20:11:25) [GET]
+  [4;35;1mEmail Load (0.9ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (6.3ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.5ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.4ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.3ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.3ms)
+Completed in 21ms (View: 15, DB: 2) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-25 20:15:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered comments/_comment (2.2ms)
+Rendered comments/_comment (0.3ms)
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 20:15:38) [GET]
+  [4;36;1mEmail Load (0.5ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.2ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.3ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.9ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.4ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.3ms)
+Completed in 61ms (View: 57, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing SiteController#about (for 127.0.0.1 at 2010-01-25 20:15:39) [GET]
+Rendering template within layouts/application
+Rendering site/about
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/site/about]
+
+
+Processing SiteController#bestof (for 127.0.0.1 at 2010-01-25 20:15:40) [GET]
+Rendering template within layouts/application
+Rendering site/bestof
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/site/bestof]
+
+
+Processing SiteController#submit (for 127.0.0.1 at 2010-01-25 20:15:40) [GET]
+Rendering template within layouts/application
+Rendering site/submit
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://0.0.0.0/site/submit]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 20:15:41) [GET]
+  [4;36;1mEmail Load (0.5ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.3ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.3ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.3ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.3ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.4ms)
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 20:28:05) [GET]
+  [4;36;1mEmail Load (0.5ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.5ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.4ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.3ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.3ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.3ms)
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-25 20:28:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered comments/_comment (2.2ms)
+Rendered comments/_comment (0.4ms)
+Completed in 19ms (View: 14, DB: 1) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#edit (for 127.0.0.1 at 2010-01-25 20:28:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/edit
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/emails/1/edit]
+
+
+Processing Tinymce::HammerController#combine (for 127.0.0.1 at 2010-01-25 20:28:13) [GET]
+Completed in 10ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/javascripts/tinymce_hammer.js]
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2010-01-25 20:29:27) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"ynK7IVDTY7kHHXwQMU6116TDeS/rHKzS8hBJfhEjUGU=", "id"=>"1", "email"=>{"body"=>"<p>This is where we put some backstory to the email. This is the explanation of what is so funny about your stupid fuckihng email.</p>\r\n<p><strong>&nbsp;&nbsp;&nbsp; Guy1@work: </strong>This is tabbed (4 spaces) and this is where you enter the shit for this guy</p>\r\n<p><strong>&nbsp;&nbsp;&nbsp; Guy2@work: </strong>This is where you add another person into the conversation.</p>", "title"=>"This is an email"}}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+  [4;35;1mEmail Update (0.3ms)[0m   [0mUPDATE "emails" SET "updated_at" = '2010-01-26 01:29:27', "body" = '<p>This is where we put some backstory to the email. This is the explanation of what is so funny about your stupid fuckihng email.</p>
+<p><strong>&nbsp;&nbsp;&nbsp; Guy1@work: </strong>This is tabbed (4 spaces) and this is where you enter the shit for this guy</p>
+<p><strong>&nbsp;&nbsp;&nbsp; Guy2@work: </strong>This is where you add another person into the conversation.</p>' WHERE "id" = 1[0m
+Redirected to http://0.0.0.0:3000/emails/1
+Completed in 9ms (DB: 0) | 302 Found [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-25 20:29:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered comments/_comment (2.2ms)
+Rendered comments/_comment (0.4ms)
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 20:29:31) [GET]
+  [4;35;1mEmail Load (0.6ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (6.8ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.7ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.7ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.6ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.6ms)
+Completed in 22ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-25 20:29:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered comments/_comment (2.1ms)
+Rendered comments/_comment (0.4ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 20:29:40) [GET]
+  [4;36;1mEmail Load (0.6ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.9ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.4ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.4ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.4ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.4ms)
+Completed in 19ms (View: 14, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-25 20:29:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered comments/_comment (2.2ms)
+Rendered comments/_comment (0.3ms)
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-25 20:29:56) [GET]
+  [4;35;1mEmail Load (0.5ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.5ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.3ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.4ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.4ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.3ms)
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-26 12:10:42) [GET]
+  [4;36;1mEmail Load (0.7ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (90.6ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.5ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.4ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.4ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.4ms)
+Completed in 122ms (View: 111, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-26 12:11:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered comments/_comment (1.1ms)
+Rendered comments/_comment (0.3ms)
+Completed in 25ms (View: 20, DB: 1) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-26 12:11:28) [GET]
+  [4;35;1mEmail Load (0.6ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (7.0ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.7ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.6ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.6ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.7ms)
+Completed in 22ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-26 12:11:51) [GET]
+  [4;35;1mEmail Load (0.5ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (6.7ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.4ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.4ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.4ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.4ms)
+Completed in 23ms (View: 18, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-26 12:12:14) [GET]
+  [4;35;1mEmail Load (0.5ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (56.5ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.6ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.4ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.4ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.4ms)
+Completed in 74ms (View: 68, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-26 12:12:14) [GET]
+  [4;35;1mEmail Load (0.5ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.8ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.5ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.4ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.5ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.4ms)
+Completed in 19ms (View: 14, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing SiteController#bestof (for 127.0.0.1 at 2010-01-26 12:12:23) [GET]
+Rendering template within layouts/application
+Rendering site/bestof
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://0.0.0.0/site/bestof]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-26 12:12:24) [GET]
+  [4;35;1mEmail Load (0.5ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.6ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.3ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.4ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.3ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.3ms)
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-26 12:12:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered comments/_comment (2.1ms)
+Rendered comments/_comment (0.4ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-26 12:13:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered comments/_comment (2.1ms)
+Rendered comments/_comment (0.4ms)
+Completed in 70ms (View: 65, DB: 1) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-26 12:13:25) [GET]
+  [4;35;1mEmail Load (0.5ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.7ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.4ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.4ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.4ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.4ms)
+Completed in 19ms (View: 14, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-26 12:15:05) [GET]
+  [4;35;1mEmail Load (0.5ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (6.7ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.3ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.3ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.3ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.3ms)
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-26 12:16:28) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".email_id = 2) [0m
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/emails/2]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-26 12:17:24) [GET]
+  [4;36;1mEmail Load (0.5ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (6.4ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.3ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.3ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.3ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.3ms)
+Completed in 21ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-26 12:18:01) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".email_id = 2) [0m
+Completed in 63ms (View: 58, DB: 0) | 200 OK [http://0.0.0.0/emails/2]
+
+
+Processing EmailsController#edit (for 127.0.0.1 at 2010-01-26 12:18:05) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering emails/edit
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/emails/2/edit]
+
+
+Processing Tinymce::HammerController#combine (for 127.0.0.1 at 2010-01-26 12:18:05) [GET]
+Completed in 10ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/javascripts/tinymce_hammer.js]
+
+
+Processing EmailsController#update (for 127.0.0.1 at 2010-01-26 12:18:13) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"ynK7IVDTY7kHHXwQMU6116TDeS/rHKzS8hBJfhEjUGU=", "id"=>"2", "email"=>{"body"=>"<p>p{color:red}<strong> heyooo</strong></p>", "title"=>"something"}}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 2) [0m
+  [4;35;1mEmail Update (0.5ms)[0m   [0mUPDATE "emails" SET "updated_at" = '2010-01-26 17:18:13', "body" = '<p>p{color:red}<strong> heyooo</strong></p>' WHERE "id" = 2[0m
+Redirected to http://0.0.0.0:3000/emails/2
+Completed in 10ms (DB: 1) | 302 Found [http://0.0.0.0/emails/2]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-26 12:18:13) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".email_id = 2) [0m
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/emails/2]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-26 12:18:15) [GET]
+  [4;35;1mEmail Load (0.5ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.4ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.3ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.3ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.3ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.3ms)
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-26 12:18:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered comments/_comment (2.2ms)
+Rendered comments/_comment (0.4ms)
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/emails/1]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-26 12:18:40) [GET]
+  [4;36;1mEmail Load (0.5ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.5ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.4ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.4ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.4ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.3ms)
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-26 12:19:54) [GET]
+  [4;36;1mEmail Load (0.5ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.6ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.3ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.3ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.3ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.3ms)
+Completed in 23ms (View: 18, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-26 12:20:06) [GET]
+  [4;36;1mEmail Load (0.5ms)[0m   [0;1mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.7ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.4ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.3ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.3ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.3ms)
+Completed in 23ms (View: 18, DB: 1) | 200 OK [http://0.0.0.0/emails]
