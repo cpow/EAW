@@ -1,6 +1,6 @@
 <h1><%= link_to_unless_current h(email.title), email %></h1>	
 
-	<%= truncate(email.body, :length => 300) %>
+	<%= truncate(email.body, :length => 500) %>
 
 		
 		<div id="postContent">
@@ -11,10 +11,5 @@
 			<%= email.comments.count%> comments
 			<%end%>
 			</div>
-			
-			
-
-			
-		
 			<br />
 		
