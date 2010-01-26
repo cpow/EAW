@@ -2986,3 +2986,65 @@ Rendered emails/_email (1.9ms)
   [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
 Rendered emails/_email (1.9ms)
 Completed in 106ms (View: 28, DB: 2) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-26 15:04:36) [GET]
+  [4;35;1mEmail Load (0.9ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (7.9ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (2.0ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.8ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.8ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.8ms)
+Completed in 25ms (View: 18, DB: 2) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#new (for 127.0.0.1 at 2010-01-26 16:34:34) [GET]
+Rendering template within layouts/application
+Rendering emails/new
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://0.0.0.0/emails/new]
+
+
+Processing EmailsController#new (for 127.0.0.1 at 2010-01-26 16:35:33) [GET]
+Rendering template within layouts/application
+Rendering emails/new
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/emails/new]
+
+
+Processing EmailsController#new (for 127.0.0.1 at 2010-01-26 16:35:34) [GET]
+Rendering template within layouts/application
+Rendering emails/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/emails/new]
+
+
+Processing EmailsController#new (for 127.0.0.1 at 2010-01-26 16:36:09) [GET]
+Rendering template within layouts/application
+Rendering emails/new
+Completed in 25ms (View: 19, DB: 0) | 200 OK [http://0.0.0.0/emails/new]
+
+
+Processing Tinymce::HammerController#combine (for 127.0.0.1 at 2010-01-26 16:36:09) [GET]
+Completed in 70ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/javascripts/tinymce_hammer.js]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-26 16:36:12) [GET]
+  [4;35;1mEmail Load (1.0ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (8.7ms)
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (2.2ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (2.1ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.9ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (1.8ms)
+Completed in 26ms (View: 19, DB: 2) | 200 OK [http://0.0.0.0/emails]
