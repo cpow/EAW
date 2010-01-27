@@ -3315,3 +3315,32 @@ Completed in 20ms (View: 11, DB: 0) | 200 OK [http://0.0.0.0/emails/new]
 
 Processing Tinymce::HammerController#combine (for 127.0.0.1 at 2010-01-27 14:57:41) [GET]
 Completed in 86ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/javascripts/tinymce_hammer.js]
+
+
+Processing EmailsController#new (for 127.0.0.1 at 2010-01-27 15:00:44) [GET]
+Rendering template within layouts/application
+Rendering emails/new
+
+ActionView::TemplateError (undefined local variable or method `init_tinymce_if_required' for #<ActionView::Base:0x2546e2c>) on line #2 of app/views/emails/new.html.erb:
+1: <h1>New email</h1>
+2: <%= init_tinymce_if_required %>
+3: 
+4: 
+5: <% form_for(@email) do |f| %>
+
+    app/views/emails/new.html.erb:2
+    app/controllers/emails_controller.rb:29:in `new'
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (29.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#new (for 127.0.0.1 at 2010-01-27 15:00:55) [GET]
+Rendering template within layouts/application
+Rendering emails/new
+Completed in 39ms (View: 30, DB: 0) | 200 OK [http://0.0.0.0/emails/new]
+
+
+Processing Tinymce::HammerController#combine (for 127.0.0.1 at 2010-01-27 15:00:56) [GET]
+Completed in 8ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/javascripts/tinymce_hammer.js]
