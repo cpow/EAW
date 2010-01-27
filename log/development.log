@@ -3258,3 +3258,60 @@ Completed in 8ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/javascripts/tinymce_h
 
 Processing Tinymce::HammerController#combine (for 127.0.0.1 at 2010-01-27 14:47:14) [GET]
 Completed in 598ms (View: 27, DB: 0) | 200 OK [http://0.0.0.0/javascripts/tinymce_hammer.js]
+
+
+Processing EmailsController#new (for 127.0.0.1 at 2010-01-27 14:53:26) [GET]
+Rendering template within layouts/application
+Rendering emails/new
+Completed in 183ms (View: 82, DB: 0) | 200 OK [http://0.0.0.0/emails/new]
+
+
+Processing Tinymce::HammerController#combine (for 127.0.0.1 at 2010-01-27 14:53:26) [GET]
+Completed in 5ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/javascripts/tinymce_hammer.js]
+
+
+Processing EmailsController#new (for 127.0.0.1 at 2010-01-27 14:53:38) [GET]
+Rendering template within layouts/application
+Rendering emails/new
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/emails/new]
+
+
+Processing Tinymce::HammerController#combine (for 127.0.0.1 at 2010-01-27 14:53:38) [GET]
+Completed in 5ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/javascripts/tinymce_hammer.js]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-27 14:53:40) [GET]
+  [4;35;1mEmail Load (0.9ms)[0m   [0mSELECT * FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (51.9ms)
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (2.5ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (2.4ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (2.2ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (14.4ms)
+Completed in 84ms (View: 75, DB: 4) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#new (for 127.0.0.1 at 2010-01-27 14:57:39) [GET]
+Rendering template within layouts/application
+Rendering emails/new
+Completed in 75ms (View: 68, DB: 0) | 200 OK [http://0.0.0.0/emails/new]
+
+
+Processing Tinymce::HammerController#combine (for 127.0.0.1 at 2010-01-27 14:57:39) [GET]
+Completed in 73ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/javascripts/tinymce_hammer.js]
+
+
+Processing EmailsController#new (for 127.0.0.1 at 2010-01-27 14:57:41) [GET]
+Rendering template within layouts/application
+Rendering emails/new
+Completed in 20ms (View: 11, DB: 0) | 200 OK [http://0.0.0.0/emails/new]
+
+
+Processing Tinymce::HammerController#combine (for 127.0.0.1 at 2010-01-27 14:57:41) [GET]
+Completed in 86ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/javascripts/tinymce_hammer.js]
