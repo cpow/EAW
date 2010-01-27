@@ -10,4 +10,9 @@ module ApplicationHelper
         javascript_include_tag "mce_editor"
       end
     end
+    
+    def page_title
+        title = @page_title ? "| #{@page_title}" : ' '
+        %(<title>Google Friend Connect #{title}</title>)
+      end
 end

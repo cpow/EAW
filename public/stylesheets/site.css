@@ -20,6 +20,7 @@ body {
 	height: 100%;
 	font-size: 12pt;
 	color: #4d4e50;	
+	padding-right: 5px;
 }
 #content h1 {
 	color: #67B64A;

@@ -1,3 +1,5 @@
+<% @page_title = @email.title%>
+
 <h1><%= link_to_unless_current h(@email.title), @email %></h1>	
 	<%= @email.body %>
 
