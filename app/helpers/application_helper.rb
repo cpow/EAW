@@ -13,6 +13,6 @@ module ApplicationHelper
     
     def page_title
         title = @page_title ? "| #{@page_title}" : ' '
-        %(<title>Google Friend Connect #{title}</title>)
+        %(<title>Emails at Work #{title}</title>)
       end
 end
