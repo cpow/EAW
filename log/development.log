@@ -3344,3 +3344,7 @@ Completed in 39ms (View: 30, DB: 0) | 200 OK [http://0.0.0.0/emails/new]
 
 Processing Tinymce::HammerController#combine (for 127.0.0.1 at 2010-01-27 15:00:56) [GET]
 Completed in 8ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/javascripts/tinymce_hammer.js]
+
+
+Processing Tinymce::HammerController#combine (for 127.0.0.1 at 2010-01-27 15:09:13) [GET]
+Completed in 5ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/javascripts/tinymce_hammer.js]
