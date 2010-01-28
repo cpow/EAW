@@ -4,7 +4,7 @@ body {
 	margin: auto;
 	text-align: center;
 	padding-bottom: 200px;
-	width: 850px;
+	width: 900px;
 }
 #header {
 	font-size: 24pt;
@@ -21,7 +21,7 @@ body {
 #content {
 	font-size: 11pt;
 	color: #4d4e50;	
-	padding-right: 5px;
+	padding-right: 10px;
 	padding-left: 10px;
 	padding-bottom: 30px;
 }
