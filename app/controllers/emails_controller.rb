@@ -2,7 +2,9 @@ class EmailsController < ApplicationController
   # GET /emails
   # GET /emails.xml
   def index
-    @emails = Email.all
+    @emails = Email.paginate :page => params[:page], 
+                           :order => 'created_at DESC', 
+                           :per_page => 5
 
     respond_to do |format|
       format.html # index.html.erb

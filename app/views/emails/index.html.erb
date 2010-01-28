@@ -1,3 +1,8 @@
 <% @page_title = "Emails" %>
 
 <%= render :partial => @emails%>
+
+<br />
+
+<%= will_paginate @posts,  :next_label => "Older",
+						   :prev_label => "Newer"%>
