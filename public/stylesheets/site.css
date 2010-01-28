@@ -18,13 +18,13 @@ body {
 }
 #content {
 	height: 100%;
-	font-size: 12pt;
+	font-size: 11pt;
 	color: #4d4e50;	
 	padding-right: 5px;
 }
 #content h1 {
 	color: #67B64A;
-	font-size: 16pt;
+	font-size: 14pt;
 	font-weight: bold;
 	font-family: arial;
 }
