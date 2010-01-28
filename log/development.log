@@ -4543,3 +4543,291 @@ Rendered emails/_email (2.2ms)
   [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
 Rendered emails/_email (1.9ms)
 Completed in 96ms (View: 18, DB: 3) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-28 13:58:32) [GET]
+  [4;36;1mEmail Load (63.9ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 4 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (292.9ms)
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (2.4ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (2.1ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.9ms)
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47emails47index46html46erb at /Users/chrisp/Desktop/EAW/app/views/emails/index.html.erb:11)
+Completed in 569ms (View: 495, DB: 65) | 200 OK [http://0.0.0.0/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-28 13:58:37) [GET]
+  [4;36;1mEmail Load (1.3ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 4 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (7.4ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (2.1ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.9ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.8ms)
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47emails47index46html46erb at /Users/chrisp/Desktop/EAW/app/views/emails/index.html.erb:11)
+Completed in 26ms (View: 17, DB: 2) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-28 13:59:11) [GET]
+  [4;36;1mEmail Load (22.3ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 4 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (7.8ms)
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (2.2ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (2.2ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (2.1ms)
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47emails47index46html46erb at /Users/chrisp/Desktop/EAW/app/views/emails/index.html.erb:11)
+Completed in 49ms (View: 18, DB: 24) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-28 13:59:33) [GET]
+  [4;36;1mEmail Load (1.3ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 4 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (8.5ms)
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (2.9ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (2.0ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.9ms)
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47emails47index46html46erb at /Users/chrisp/Desktop/EAW/app/views/emails/index.html.erb:11)
+Completed in 29ms (View: 19, DB: 2) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-28 13:59:44) [GET]
+  [4;36;1mEmail Load (1.4ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 4 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (8.4ms)
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (2.7ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (2.0ms)
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (2.0ms)
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47emails47index46html46erb at /Users/chrisp/Desktop/EAW/app/views/emails/index.html.erb:11)
+Completed in 29ms (View: 19, DB: 3) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-28 13:59:52) [GET]
+  [4;36;1mEmail Load (1.2ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 4 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (7.8ms)
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (4.1ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (2.4ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.9ms)
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47emails47index46html46erb at /Users/chrisp/Desktop/EAW/app/views/emails/index.html.erb:11)
+Completed in 29ms (View: 20, DB: 3) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-28 14:00:00) [GET]
+  [4;36;1mEmail Load (1.2ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 4 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (7.9ms)
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (2.1ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (2.4ms)
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (2.4ms)
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47emails47index46html46erb at /Users/chrisp/Desktop/EAW/app/views/emails/index.html.erb:11)
+Completed in 27ms (View: 18, DB: 2) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-28 14:00:30) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".email_id = 5) [0m
+Completed in 43ms (View: 36, DB: 1) | 200 OK [http://0.0.0.0/emails/5]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-28 14:00:39) [GET]
+  [4;35;1mEmail Load (1.2ms)[0m   [0mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 4 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (7.8ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (2.2ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.9ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.8ms)
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47emails47index46html46erb at /Users/chrisp/Desktop/EAW/app/views/emails/index.html.erb:11)
+Completed in 26ms (View: 17, DB: 3) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-28 14:01:20) [GET]
+  [4;35;1mEmail Load (1.2ms)[0m   [0mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 4 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (7.5ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (2.1ms)
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (2.1ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (2.0ms)
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47emails47index46html46erb at /Users/chrisp/Desktop/EAW/app/views/emails/index.html.erb:11)
+Completed in 26ms (View: 17, DB: 2) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-28 14:02:06) [GET]
+  [4;35;1mEmail Load (1.2ms)[0m   [0mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 4 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (78.6ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (2.2ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (2.0ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (2.0ms)
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47emails47index46html46erb at /Users/chrisp/Desktop/EAW/app/views/emails/index.html.erb:11)
+Completed in 97ms (View: 89, DB: 2) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-28 14:02:31) [GET]
+  [4;35;1mEmail Load (1.2ms)[0m   [0mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 4 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (8.1ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (2.2ms)
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (2.3ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (2.1ms)
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47emails47index46html46erb at /Users/chrisp/Desktop/EAW/app/views/emails/index.html.erb:11)
+Completed in 27ms (View: 18, DB: 3) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-28 14:03:04) [GET]
+  [4;35;1mEmail Load (1.2ms)[0m   [0mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 4 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (12.0ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (2.3ms)
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (2.5ms)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (3.8ms)
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47emails47index46html46erb at /Users/chrisp/Desktop/EAW/app/views/emails/index.html.erb:11)
+Completed in 44ms (View: 31, DB: 3) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-28 14:05:45) [GET]
+  [4;35;1mEmail Load (1.5ms)[0m   [0mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 4 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (9.3ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (2.2ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (2.0ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.8ms)
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47emails47index46html46erb at /Users/chrisp/Desktop/EAW/app/views/emails/index.html.erb:11)
+Completed in 39ms (View: 28, DB: 3) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-28 14:06:02) [GET]
+  [4;35;1mEmail Load (1.2ms)[0m   [0mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 4 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (7.8ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.9ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.8ms)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (2.7ms)
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47emails47index46html46erb at /Users/chrisp/Desktop/EAW/app/views/emails/index.html.erb:11)
+Completed in 27ms (View: 18, DB: 2) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing SiteController#about (for 127.0.0.1 at 2010-01-28 14:06:07) [GET]
+Rendering template within layouts/application
+Rendering site/about
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://0.0.0.0/site/about]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-28 14:06:08) [GET]
+  [4;35;1mEmail Load (1.2ms)[0m   [0mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 4 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (7.2ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (2.1ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.9ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.9ms)
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47emails47index46html46erb at /Users/chrisp/Desktop/EAW/app/views/emails/index.html.erb:11)
+Completed in 25ms (View: 17, DB: 3) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-28 14:06:29) [GET]
+  [4;35;1mEmail Load (1.3ms)[0m   [0mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 4 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (7.8ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (2.2ms)
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (2.1ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (2.4ms)
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47emails47index46html46erb at /Users/chrisp/Desktop/EAW/app/views/emails/index.html.erb:11)
+Completed in 28ms (View: 18, DB: 3) | 200 OK [http://0.0.0.0/emails]
