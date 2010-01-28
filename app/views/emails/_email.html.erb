@@ -1,8 +1,10 @@
+<div id="post">
+
 <h1><%= link_to_unless_current h(email.title), email %></h1>	
 
 	<%= truncate(email.body, :length => 500) %>
 
-		
+	</div>	
 		<div id="postContent">
 				
 			Posted <%= email.created_at.strftime("%A, %b %d")%> <br />
@@ -12,4 +14,6 @@
 			<%end%>
 			</div>
 			<br />
+			
+
 		

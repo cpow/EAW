@@ -23,17 +23,17 @@ body {
 	padding-right: 5px;
 }
 #content h1 {
-	color: #67B64A;
+	color: #0096cf;
 	font-size: 14pt;
 	font-weight: bold;
 	font-family: arial;
 }
 #content a:link, #content a:visited {
-	color: #67B64A;
+	color: #0096cf;
 	border: none;
 }
 #content a:link, #content a:active {
-	color: #67B64A;
+	color: #0096cf;
 	border: none;
 }
 #content h2 {
@@ -48,22 +48,26 @@ body {
 	width: 250px;
 }
 #nav {
-	color: #4d4e50;
-	background: #00A8CC;
+	color: #e1e1e1;
+	background: #0096cf;
 	font-size: 10pt;
 	padding: 0.5em;
 }
 #nav a, #nav a:visited {
-	color: white;
+	color: #e1e1e1;
 } 
 #nav a:hover {
-	color: #4d4e50;
+	color: white;
 }
 #notice {
 	color: #00A8CC;
 }
 #error{
 	color: red;
+}
+#post {
+	width: 65%;
+	background: #e1e1e1;
 }
 #postContent {
 	color: #00A8CC;
