@@ -17,11 +17,16 @@
 	<div id="header">
 	Emails at Work
 	</div><!--end header div-->		
+			<b class="rtop">
+			  <b class="r1"></b> <b class="r2"></b> <b class="r3"></b> <b class="r4"></b>
+			</b>
 			<div id="nav">
+				<div id="navlinks">
 				<%= link_to_unless_current "Emails", :controller => 'emails', :action => 'index'%> |
 				<%= link_to_unless_current "About", :controller => 'site', :action => 'about'%> |
 				<%= link_to_unless_current "Best Of", :controller => 'site', :action => 'bestof'%> |
 				<%= link_to_unless_current "Submit an Email", :controller => 'site', :action => 'submit'%>
+				</div>
 			</div><!--end nav div-->
 			<br />
 			<div id="sidebar">
@@ -126,9 +131,14 @@
 			
 				
 				</div>
+					
 			
 		
 	
 </div><!--end container div-->	
+<b class="nbottom">
+  <b class="r4"></b> <b class="r3"></b> <b class="r2"></b> <b class="r1"></b>
+</b>
+
 
 </body>
