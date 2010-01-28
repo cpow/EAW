@@ -4,7 +4,7 @@ class EmailsController < ApplicationController
   def index
     @emails = Email.paginate :page => params[:page], 
                            :order => 'created_at DESC', 
-                           :per_page => 4
+                           :per_page => 5
 
     respond_to do |format|
       format.html # index.html.erb
