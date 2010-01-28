@@ -1,6 +1,6 @@
 body {
 	font-family: arial;
-	background: white;
+	background: #e1e1e1;
 	margin: auto;
 	text-align: center;
 }
@@ -8,10 +8,12 @@ body {
 	font-size: 24pt;
 	padding: 12px;
 	color: #4d4e50;
+	background: #e1e1e1;
 }
 #container {
 	width: 800px;
 	text-align: left;
+	background: white;
 	color: #4d4e50;
 	margin: auto;
 	padding: 0;
@@ -41,10 +43,12 @@ body {
 	font-size: 12pt;
 	font-family: arial;
 	font-weight: bold;
+	
 }
 #sidebar {
 	float: right;
 	padding-bottom: 100px;
+	padding-right: 3px;
 	width: 250px;
 }
 #nav {
@@ -67,7 +71,7 @@ body {
 }
 #post {
 	width: 65%;
-	background: #e1e1e1;
+	background: white3;
 }
 #postContent {
 	color: #00A8CC;
