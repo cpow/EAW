@@ -1,0 +1,30 @@
+<% @page_title = "Submit an Email" %>
+
+<h1>Submit an Email</h1>
+<strong>Had an interesting email conversation at work?</strong><br /><br />
+<p>Fill out this form with a correct email address. Please format your message the same way we do on the site.
+This will make it easier for us to read you email and increase your chances of seeing it on the front page!
+We will email you back to let you know if we consider your conversation interesting.</p><br /><br />
+
+<fieldset id="" class="">
+	<legend>Email Submission</legend>	
+
+<% form_for :mail, :url => {:action => "sendMail"} do |f|%>
+
+<%= f.label "Name" %><br />
+<%= f.text_field :name %><br />
+
+<%= f.label "Your Email" %><br />
+<%= f.text_field :email %><br />
+
+<%= f.label "Backstory (story behind the conversation)" %><br />
+<%= f.text_area :backstory %><br />
+
+
+<%= f.label "Email Conversation" %><br />
+<%= f.text_area :convo %><br />
+
+<%= f.submit "Send" %>
+<% end %>
+
+</fieldset>

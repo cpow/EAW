@@ -20,9 +20,19 @@ config.action_controller.allow_forgery_protection    = false
 # Tell Action Mailer not to deliver emails to the real world.
 # The :test delivery method accumulates sent emails in the
 # ActionMailer::Base.deliveries array.
-config.action_mailer.delivery_method = :test
+config.action_mailer.delivery_method = :smtp
 
 # Use SQL instead of Active Record's schema dumper when creating the test database.
 # This is necessary if your schema can't be completely dumped by the schema dumper,
 # like if you have constraints or database-specific column types
 # config.active_record.schema_format = :sql
+
+ActionMailer::Base.smtp_settings = {
+    :enable_starttls_auto => true,
+    :address        => 'smtp.gmail.com',
+    :port           => 587,
+    :domain         => 'cpowsolutions.com',
+    :authentication => :plain,
+    :user_name      => 'email@cpowsolutions.com',
+    :password       => 'theyare567'
+}

@@ -104,13 +104,24 @@ body {
 .r4{margin: 0 1px; height: 2px}
 
 
-fieldset {
+#new_comment fieldset {
 	width: 60%;
 	border: 0px;
+	background: white;
 }
 
-legend {
+#new_comment legend {
 	background: #4d4e50;
 	color: white;
 	padding: .25em;
+}
+
+fieldset {
+	width: 50%;
+	background: #e1e1e1;
+}
+legend {
+	background: #0096cf;
+	padding: .25em;
+	color: white;
 }

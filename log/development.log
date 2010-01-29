@@ -4945,3 +4945,646 @@ Rendering emails/show
   [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
   [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".email_id = 5) [0m
 Completed in 26ms (View: 19, DB: 1) | 200 OK [http://0.0.0.0/emails/5]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-28 21:29:42) [GET]
+  [4;36;1mEmail Load (1.1ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (187.2ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.7ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.5ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.3ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (1.4ms)
+Completed in 215ms (View: 209, DB: 2) | 200 OK [http://0.0.0.0/]
+
+
+Processing SiteController#submit (for 127.0.0.1 at 2010-01-28 21:29:46) [GET]
+Rendering template within layouts/application
+Rendering site/submit
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://0.0.0.0/site/submit]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-28 21:30:10) [GET]
+  [4;35;1mEmail Load (0.9ms)[0m   [0mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (4.8ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.7ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.7ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.3ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (1.3ms)
+Completed in 23ms (View: 17, DB: 2) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing SubmitController#index (for 127.0.0.1 at 2010-01-28 21:30:12) [GET]
+Rendering template within layouts/application
+Rendering submit/index
+Completed in 18ms (View: 17, DB: 0) | 200 OK [http://0.0.0.0/submit]
+
+
+Processing SubmitController#index (for 127.0.0.1 at 2010-01-28 21:30:46) [GET]
+Rendering template within layouts/application
+Rendering submit/index
+Completed in 10ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/submit]
+
+
+Processing SubmitController#index (for 127.0.0.1 at 2010-01-28 21:31:24) [GET]
+Rendering template within layouts/application
+Rendering submit/index
+Completed in 55ms (View: 54, DB: 0) | 200 OK [http://0.0.0.0/submit]
+
+
+Processing SubmitController#index (for 127.0.0.1 at 2010-01-28 21:31:41) [GET]
+Rendering template within layouts/application
+Rendering submit/index
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/submit]
+
+
+Processing SubmitController#index (for 127.0.0.1 at 2010-01-28 21:32:17) [GET]
+Rendering template within layouts/application
+Rendering submit/index
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/submit]
+
+
+Processing SubmitController#index (for 127.0.0.1 at 2010-01-28 21:32:35) [GET]
+Rendering template within layouts/application
+Rendering submit/index
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/submit]
+
+
+Processing SubmitController#index (for 127.0.0.1 at 2010-01-28 21:32:58) [GET]
+Rendering template within layouts/application
+Rendering submit/index
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/submit]
+
+
+Processing SubmitController#index (for 127.0.0.1 at 2010-01-28 21:33:06) [GET]
+Rendering template within layouts/application
+Rendering submit/index
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/submit]
+
+
+Processing SubmitController#index (for 127.0.0.1 at 2010-01-28 21:33:46) [GET]
+Rendering template within layouts/application
+Rendering submit/index
+Completed in 55ms (View: 54, DB: 0) | 200 OK [http://0.0.0.0/submit]
+
+
+Processing SubmitController#index (for 127.0.0.1 at 2010-01-28 21:34:02) [GET]
+Rendering template within layouts/application
+Rendering submit/index
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/submit]
+
+
+Processing SubmitController#index (for 127.0.0.1 at 2010-01-28 21:34:24) [GET]
+Rendering template within layouts/application
+Rendering submit/index
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/submit]
+
+
+Processing SubmitController#index (for 127.0.0.1 at 2010-01-28 21:34:38) [GET]
+Rendering template within layouts/application
+Rendering submit/index
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/submit]
+
+
+Processing SubmitController#sendMail (for 127.0.0.1 at 2010-01-28 21:35:25) [POST]
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"AZ+SQLwkUuwTRxMTSFwGsVDzCyt0DODHyrHlZYPVzXU=", "mail"=>{"name"=>"chris", "body"=>"<p><strong>guy1@work:</strong> hahah omfg</p>", "backstory"=>"sadklhfjlkd\r\n\r\nthis is backstory", "email"=>"chris@something.com"}}
+
+NameError (uninitialized constant SubmitController::Contact):
+  app/controllers/submit_controller.rb:7:in `sendMail'
+
+Rendered rescues/_trace (29.5ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmails (20100112223855)
+Migrating to CreateComments (20100112230029)
+Migrating to RemovePostIdFromComments (20100112230909)
+Migrating to AddEmailIdToComments (20100112230954)
+Migrating to CreateSubmits (20100129021630)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "submits" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100129021630')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("emails")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("submits")[0m
+
+
+Processing SubmitController#sendMail (for 127.0.0.1 at 2010-01-28 21:39:30) [POST]
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"AZ+SQLwkUuwTRxMTSFwGsVDzCyt0DODHyrHlZYPVzXU=", "mail"=>{"name"=>"chris", "body"=>"<p><strong>guy1@work:</strong> hahah omfg</p>", "backstory"=>"sadklhfjlkd\r\n\r\nthis is backstory", "email"=>"chris@something.com"}}
+
+NameError (uninitialized constant SubmitController::Contact):
+  app/controllers/submit_controller.rb:7:in `sendMail'
+
+Rendered rescues/_trace (25.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-28 21:39:44) [GET]
+  [4;36;1mEmail Load (1.1ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (93.9ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.8ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.6ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.6ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (1.5ms)
+Completed in 124ms (View: 118, DB: 2) | 200 OK [http://0.0.0.0/]
+
+
+Processing SubmitController#index (for 127.0.0.1 at 2010-01-28 21:39:46) [GET]
+Rendering template within layouts/application
+Rendering submit/index
+Completed in 11ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/submit]
+
+
+Processing SubmitController#sendMail (for 127.0.0.1 at 2010-01-28 21:39:51) [POST]
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"AZ+SQLwkUuwTRxMTSFwGsVDzCyt0DODHyrHlZYPVzXU=", "mail"=>{"name"=>"sdf", "body"=>"<p>asdfsadf</p>", "backstory"=>"sadf", "email"=>"sadf"}}
+
+NameError (uninitialized constant SubmitController::Contact):
+  app/controllers/submit_controller.rb:7:in `sendMail'
+
+Rendered rescues/_trace (26.6ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SubmitController#sendMail (for 127.0.0.1 at 2010-01-28 21:40:38) [POST]
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"AZ+SQLwkUuwTRxMTSFwGsVDzCyt0DODHyrHlZYPVzXU=", "mail"=>{"name"=>"sdf", "body"=>"<p>asdfsadf</p>", "backstory"=>"sadf", "email"=>"sadf"}}
+
+NameError (uninitialized constant SubmitController::Contact):
+  app/controllers/submit_controller.rb:7:in `sendMail'
+
+Rendered rescues/_trace (84.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SubmitController#sendMail (for 127.0.0.1 at 2010-01-28 21:40:59) [POST]
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"AZ+SQLwkUuwTRxMTSFwGsVDzCyt0DODHyrHlZYPVzXU=", "mail"=>{"name"=>"sdf", "body"=>"<p>asdfsadf</p>", "backstory"=>"sadf", "email"=>"sadf"}}
+
+SyntaxError (/Users/cpow/Desktop/EAW/app/models/submit.rb:6: syntax error, unexpected ':', expecting kEND
+      body :name => name, :email => email,...
+            ^
+/Users/cpow/Desktop/EAW/app/models/submit.rb:6: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+... body :name => name, :email => email, :backstory => backstor...
+                              ^
+/Users/cpow/Desktop/EAW/app/models/submit.rb:6: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+...:email => email, :backstory => backstory, :body => body
+                              ^
+/Users/cpow/Desktop/EAW/app/models/submit.rb:6: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+...ckstory => backstory, :body => body
+                              ^):
+  app/controllers/submit_controller.rb:7:in `sendMail'
+
+Rendered rescues/_trace (32.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SubmitController#sendMail (for 127.0.0.1 at 2010-01-28 21:42:55) [POST]
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"AZ+SQLwkUuwTRxMTSFwGsVDzCyt0DODHyrHlZYPVzXU=", "mail"=>{"name"=>"sdf", "body"=>"<p>asdfsadf</p>", "backstory"=>"sadf", "email"=>"sadf"}}
+
+SyntaxError (/Users/cpow/Desktop/EAW/app/models/submit.rb:6: syntax error, unexpected ':', expecting kEND
+      body :name => name, :email => email,...
+            ^
+/Users/cpow/Desktop/EAW/app/models/submit.rb:6: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+... body :name => name, :email => email, :backstory => backstor...
+                              ^
+/Users/cpow/Desktop/EAW/app/models/submit.rb:6: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+...:email => email, :backstory => backstory, :body => body
+                              ^
+/Users/cpow/Desktop/EAW/app/models/submit.rb:6: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+...ckstory => backstory, :body => body
+                              ^):
+  app/controllers/submit_controller.rb:7:in `sendMail'
+
+Rendered rescues/_trace (32.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SubmitController#sendMail (for 127.0.0.1 at 2010-01-28 21:45:34) [POST]
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"AZ+SQLwkUuwTRxMTSFwGsVDzCyt0DODHyrHlZYPVzXU=", "mail"=>{"name"=>"sdf", "body"=>"<p>asdfsadf</p>", "backstory"=>"sadf", "email"=>"sadf"}}
+
+NameError (undefined local variable or method `convo' for #<SubmitController:0x245e474>):
+  app/controllers/submit_controller.rb:7:in `sendMail'
+
+Rendered rescues/_trace (83.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SubmitController#sendMail (for 127.0.0.1 at 2010-01-28 21:45:53) [POST]
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"AZ+SQLwkUuwTRxMTSFwGsVDzCyt0DODHyrHlZYPVzXU=", "mail"=>{"name"=>"sdf", "body"=>"<p>asdfsadf</p>", "backstory"=>"sadf", "email"=>"sadf"}}
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `deliver_mail' for Submit(id: integer, created_at: datetime, updated_at: datetime):Class):
+  /Users/cpow/.gem/ruby/1.8/gems/will_paginate-2.3.12/lib/will_paginate/finder.rb:170:in `method_missing'
+  app/controllers/submit_controller.rb:7:in `sendMail'
+
+Rendered rescues/_trace (28.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-28 21:49:30) [GET]
+  [4;36;1mEmail Load (1.1ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (90.1ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.5ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.3ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.3ms)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (2.0ms)
+Completed in 119ms (View: 112, DB: 2) | 200 OK [http://0.0.0.0/]
+
+
+Processing SubmitController#index (for 127.0.0.1 at 2010-01-28 21:49:33) [GET]
+Rendering template within layouts/application
+Rendering submit/index
+Completed in 11ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/submit]
+
+
+Processing SubmitController#sendMail (for 127.0.0.1 at 2010-01-28 21:49:41) [POST]
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"AZ+SQLwkUuwTRxMTSFwGsVDzCyt0DODHyrHlZYPVzXU=", "mail"=>{"name"=>"sadfasdf", "convo"=>"<p>asdfsdafsdfa</p>", "backstory"=>"sdafsadfsdfa", "email"=>"sadfasdf"}}
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `deliver_mail' for Submit(id: integer, created_at: datetime, updated_at: datetime):Class):
+  /Users/cpow/.gem/ruby/1.8/gems/will_paginate-2.3.12/lib/will_paginate/finder.rb:170:in `method_missing'
+  app/controllers/submit_controller.rb:7:in `sendMail'
+
+Rendered rescues/_trace (28.0ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SubmitController#index (for 127.0.0.1 at 2010-01-28 21:55:54) [GET]
+Rendering template within layouts/application
+Rendering submit/index
+Completed in 25ms (View: 24, DB: 0) | 200 OK [http://0.0.0.0/submit/]
+
+
+Processing SubmitController#sendMail (for 127.0.0.1 at 2010-01-28 21:55:58) [GET]
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/submit_controller.rb:3:in `sendMail'
+
+Rendered rescues/_trace (26.6ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SubmitController#index (for 127.0.0.1 at 2010-01-28 21:57:57) [GET]
+Rendering template within layouts/application
+Rendering submit/index
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/submit/]
+
+
+Processing SubmitController#sendMail (for 127.0.0.1 at 2010-01-28 21:58:06) [POST]
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"AZ+SQLwkUuwTRxMTSFwGsVDzCyt0DODHyrHlZYPVzXU=", "mail"=>{"name"=>"yjukyjk", "convo"=>"<p>hijpuimuiylnhji</p>", "backstory"=>"hji,uiol,", "email"=>"yujhuoh"}}
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `deliver_mail' for Submit(id: integer, created_at: datetime, updated_at: datetime):Class):
+  /Users/cpow/.gem/ruby/1.8/gems/will_paginate-2.3.12/lib/will_paginate/finder.rb:170:in `method_missing'
+  app/controllers/submit_controller.rb:7:in `sendMail'
+
+Rendered rescues/_trace (71.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SubmitController#sendMail (for 127.0.0.1 at 2010-01-28 22:01:45) [POST]
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"AZ+SQLwkUuwTRxMTSFwGsVDzCyt0DODHyrHlZYPVzXU=", "mail"=>{"name"=>"yjukyjk", "convo"=>"<p>hijpuimuiylnhji</p>", "backstory"=>"hji,uiol,", "email"=>"yujhuoh"}}
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `deliver_mail' for Submit(id: integer, created_at: datetime, updated_at: datetime):Class):
+  /Users/cpow/.gem/ruby/1.8/gems/will_paginate-2.3.12/lib/will_paginate/finder.rb:170:in `method_missing'
+  app/controllers/submit_controller.rb:7:in `sendMail'
+
+Rendered rescues/_trace (26.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-28 22:03:16) [GET]
+
+ActionController::RoutingError (No route matches "/submitemail" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmails (20100112223855)
+Migrating to CreateComments (20100112230029)
+Migrating to RemovePostIdFromComments (20100112230909)
+Migrating to AddEmailIdToComments (20100112230954)
+Migrating to CreateSubmits (20100129021630)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("emails")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("submits")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-28 22:03:34) [GET]
+
+ActionController::RoutingError (No route matches "/submitemail" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-28 22:03:37) [GET]
+  [4;36;1mEmail Load (0.9ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (96.9ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.5ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.4ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.4ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (1.4ms)
+Completed in 126ms (View: 119, DB: 2) | 200 OK [http://0.0.0.0/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-28 22:03:39) [GET]
+
+ActionController::RoutingError (No route matches "/submitemail" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmails (20100112223855)
+Migrating to CreateComments (20100112230029)
+Migrating to RemovePostIdFromComments (20100112230909)
+Migrating to AddEmailIdToComments (20100112230954)
+Migrating to CreateSubmits (20100129021630)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("emails")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("submits")[0m
+
+
+Processing SubmitemailController#index (for 127.0.0.1 at 2010-01-28 22:06:20) [GET]
+Rendering template within layouts/application
+Rendering submitemail/index
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/submitemail]
+
+
+Processing SubmitemailController#sendMail (for 127.0.0.1 at 2010-01-28 22:06:27) [POST]
+  Parameters: {"commit"=>"Send", "authenticity_token"=>"AZ+SQLwkUuwTRxMTSFwGsVDzCyt0DODHyrHlZYPVzXU=", "mail"=>{"name"=>"sdfasdf", "convo"=>"<p>asdfasdf</p>", "backstory"=>"sdafasdf", "email"=>"sadfsadf"}}
+Sent mail to emailsatwork.com@gmail.com
+
+Date: Thu, 28 Jan 2010 22:06:27 -0500
+From: email@cpowsolutions.com
+To: emailsatwork.com@gmail.com
+Subject: You've received feedback from EmailsAtWork
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+You got an email from: sdfasdf
+
+Backstory: sdafasdf
+
+email: 
+
+This email came from: sadfsadf
+Rendering template within layouts/application
+Rendering submitemail/sendMail
+Completed in 3003ms (View: 7, DB: 0) | 200 OK [http://0.0.0.0/submitemail/sendMail]
+
+
+Processing SubmitemailController#index (for 127.0.0.1 at 2010-01-28 22:09:59) [GET]
+Rendering template within layouts/application
+Rendering submitemail/index
+Completed in 10ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/submitemail]
+
+
+Processing SubmitemailController#index (for 127.0.0.1 at 2010-01-28 22:13:08) [GET]
+Rendering template within layouts/application
+Rendering submitemail/index
+Completed in 55ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/submitemail]
+
+
+Processing SubmitemailController#index (for 127.0.0.1 at 2010-01-28 22:13:27) [GET]
+Rendering template within layouts/application
+Rendering submitemail/index
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/submitemail]
+
+
+Processing SubmitemailController#index (for 127.0.0.1 at 2010-01-28 22:13:51) [GET]
+Rendering template within layouts/application
+Rendering submitemail/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/submitemail]
+
+
+Processing SubmitemailController#index (for 127.0.0.1 at 2010-01-28 22:14:00) [GET]
+Rendering template within layouts/application
+Rendering submitemail/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/submitemail]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-28 22:14:08) [GET]
+  [4;35;1mEmail Load (0.9ms)[0m   [0mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (4.7ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.3ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.4ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.4ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (1.4ms)
+Completed in 19ms (View: 12, DB: 2) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing SubmitemailController#index (for 127.0.0.1 at 2010-01-28 22:14:10) [GET]
+Rendering template within layouts/application
+Rendering submitemail/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/submitemail]
+
+
+Processing SubmitemailController#index (for 127.0.0.1 at 2010-01-28 22:14:38) [GET]
+Rendering template within layouts/application
+Rendering submitemail/index
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/submitemail]
+
+
+Processing SubmitemailController#index (for 127.0.0.1 at 2010-01-28 22:14:47) [GET]
+Rendering template within layouts/application
+Rendering submitemail/index
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/submitemail]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-28 22:15:04) [GET]
+  [4;36;1mEmail Load (0.9ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (4.6ms)
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (53.7ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.5ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.3ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (1.4ms)
+Completed in 71ms (View: 65, DB: 2) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-28 22:15:06) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".email_id = 5) [0m
+Completed in 18ms (View: 13, DB: 0) | 200 OK [http://0.0.0.0/emails/5]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-28 22:15:48) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".email_id = 5) [0m
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/emails/5]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-28 22:16:23) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".email_id = 5) [0m
+Completed in 18ms (View: 13, DB: 0) | 200 OK [http://0.0.0.0/emails/5]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-28 22:16:32) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".email_id = 5) [0m
+Completed in 18ms (View: 13, DB: 0) | 200 OK [http://0.0.0.0/emails/5]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-28 22:16:41) [GET]
+  [4;35;1mEmail Load (0.8ms)[0m   [0mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (4.6ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (1.4ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.7ms)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.3ms)
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (1.4ms)
+Completed in 19ms (View: 13, DB: 2) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-01-28 22:16:45) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering emails/show
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".email_id = 5) [0m
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/emails/5]

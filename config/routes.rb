@@ -1,4 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
+  map.connect 'submitemail/', :controller => 'submitemail', :action => 'index'
 
   map.resources :emails, :has_many => :comments
   map.resources :comments, :belongs_to => :emails

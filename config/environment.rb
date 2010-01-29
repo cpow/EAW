@@ -41,3 +41,5 @@ Rails::Initializer.run do |config|
 end
 
 require 'will_paginate'
+
+ActionMailer::Base.delivery_method = :smtp
