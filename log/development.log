@@ -5864,3 +5864,633 @@ Rendered emails/_email (1.4ms)
   [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
 Rendered emails/_email (1.4ms)
 Completed in 19ms (View: 13, DB: 2) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-29 11:41:05) [GET]
+  [4;36;1mEmail Load (1.7ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (306.7ms)
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (2.3ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.9ms)
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (2.6ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (2.8ms)
+ERROR: compiling _run_erb_app47views47layouts47application46html46erb RAISED compile error
+/Users/chrisp/Desktop/EAW/app/views/layouts/application.html.erb:18: syntax error, unexpected ':', expecting ')'
+...oncat(( image_tag "logo.jpg" :size => "900x200").to_s); @out...
+                              ^
+Function body:           def _run_erb_app47views47layouts47application46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n"
+@output_buffer.concat "       \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n"
+@output_buffer.concat "<head>\n"
+@output_buffer.concat "  <meta http-equiv=\"content-type\" content=\"text/html;charset=UTF-8\" />\n"
+@output_buffer.concat "  "; @output_buffer.concat(( page_title ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  "; @output_buffer.concat(( init_tinymce_hammer_if_required ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  "; @output_buffer.concat(( stylesheet_link_tag 'site.css' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "</head>\n"
+@output_buffer.concat "<body>\n"
+@output_buffer.concat "<div id=\"container\">\n"
+@output_buffer.concat "\t\t\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t<div id=\"header\">\n"
+@output_buffer.concat "\t\t"; @output_buffer.concat(( image_tag "logo.jpg" :size => "900x200").to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t</div><!--end header div-->\t\t\n"
+@output_buffer.concat "\t\t\t<b class=\"rtop\">\n"
+@output_buffer.concat "\t\t\t  <b class=\"r1\"></b> <b class=\"r2\"></b> <b class=\"r3\"></b> <b class=\"r4\"></b>\n"
+@output_buffer.concat "\t\t\t</b>\n"
+@output_buffer.concat "\t\t\t<div id=\"nav\">\n"
+@output_buffer.concat "\t\t\t\t<div id=\"navlinks\">\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat(( link_to_unless_current "Emails", :controller => 'emails', :action => 'index').to_s); @output_buffer.concat " |\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat(( link_to_unless_current "About", :controller => 'site', :action => 'about').to_s); @output_buffer.concat " |\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat(( link_to_unless_current "Best Of", :controller => 'site', :action => 'bestof').to_s); @output_buffer.concat " |\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat(( link_to_unless_current "Submit an Email", :controller => 'submitemail', :action => 'index').to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t</div>\n"
+@output_buffer.concat "\t\t\t</div><!--end nav div-->\n"
+@output_buffer.concat "\t\t\t<br />\n"
+@output_buffer.concat "\t\t\t<div id=\"sidebar\">\n"
+@output_buffer.concat "\t\t\t\t<br />\n"
+@output_buffer.concat "\t\t\t\t<!-- Include the Google Friend Connect javascript library. -->\n"
+@output_buffer.concat "\t\t\t\t<!-- this is the script for the Members gadget -->\n"
+@output_buffer.concat "\t\t\t\t<script type=\"text/javascript\" src=\"http://www.google.com/friendconnect/script/friendconnect.js\"></script>\n"
+@output_buffer.concat "\t\t\t\t<!-- Define the div tag where the gadget will be inserted. -->\n"
+@output_buffer.concat "\t\t\t\t<div id=\"div-3920466159675450450\" style=\"width:250px;border:1px solid #cccccc;\"></div>\n"
+@output_buffer.concat "\t\t\t\t<!-- Render the gadget into a div. -->\n"
+@output_buffer.concat "\t\t\t\t<script type=\"text/javascript\">\n"
+@output_buffer.concat "\t\t\t\tvar skin = {};\n"
+@output_buffer.concat "\t\t\t\tskin['BORDER_COLOR'] = '#cccccc';\n"
+@output_buffer.concat "\t\t\t\tskin['ENDCAP_BG_COLOR'] = '#e1e1e1';\n"
+@output_buffer.concat "\t\t\t\tskin['ENDCAP_TEXT_COLOR'] = '#4d4e50';\n"
+@output_buffer.concat "\t\t\t\tskin['ENDCAP_LINK_COLOR'] = '#0000cc';\n"
+@output_buffer.concat "\t\t\t\tskin['ALTERNATE_BG_COLOR'] = '#ffffff';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_BG_COLOR'] = '#ffffff';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_LINK_COLOR'] = '#0096cf';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_TEXT_COLOR'] = '#333333';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_SECONDARY_LINK_COLOR'] = '#7777cc';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_SECONDARY_TEXT_COLOR'] = '#666666';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_HEADLINE_COLOR'] = '#333333';\n"
+@output_buffer.concat "\t\t\t\tskin['NUMBER_ROWS'] = '4';\n"
+@output_buffer.concat "\t\t\t\tgoogle.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);\n"
+@output_buffer.concat "\t\t\t\tgoogle.friendconnect.container.renderMembersGadget(\n"
+@output_buffer.concat "\t\t\t\t { id: 'div-3920466159675450450',\n"
+@output_buffer.concat "\t\t\t\t   site: '11837562349990569265' },\n"
+@output_buffer.concat "\t\t\t\t  skin);\n"
+@output_buffer.concat "\t\t\t\t</script>\n"
+@output_buffer.concat "\t\t\t\t<br />\n"
+@output_buffer.concat "\t\t\t\t<!-- Include the Google Friend Connect javascript library. -->\n"
+@output_buffer.concat "\t\t\t\t<!-- This is the script for the Best Of gadget -->\n"
+@output_buffer.concat "\t\t\t\t<script type=\"text/javascript\" src=\"http://www.google.com/friendconnect/script/friendconnect.js\"></script>\n"
+@output_buffer.concat "\t\t\t\t<!-- Define the div tag where the gadget will be inserted. -->\n"
+@output_buffer.concat "\t\t\t\t<div id=\"div-2899782779156181768\" style=\"width:250px;border:1px solid #cccccc;\"></div>\n"
+@output_buffer.concat "\t\t\t\t<!-- Render the gadget into a div. -->\n"
+@output_buffer.concat "\t\t\t\t<script type=\"text/javascript\">\n"
+@output_buffer.concat "\t\t\t\tvar skin = {};\n"
+@output_buffer.concat "\t\t\t\tskin['BORDER_COLOR'] = '#cccccc';\n"
+@output_buffer.concat "\t\t\t\tskin['ENDCAP_BG_COLOR'] = '#e1e1e1';\n"
+@output_buffer.concat "\t\t\t\tskin['ENDCAP_TEXT_COLOR'] = '#4d4e50';\n"
+@output_buffer.concat "\t\t\t\tskin['ENDCAP_LINK_COLOR'] = '#0000cc';\n"
+@output_buffer.concat "\t\t\t\tskin['ALTERNATE_BG_COLOR'] = '#ffffff';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_BG_COLOR'] = '#ffffff';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_LINK_COLOR'] = '#0096cf';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_TEXT_COLOR'] = '#333333';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_SECONDARY_LINK_COLOR'] = '#7777cc';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_SECONDARY_TEXT_COLOR'] = '#666666';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_HEADLINE_COLOR'] = '#333333';\n"
+@output_buffer.concat "\t\t\t\tskin['HEADER_TEXT'] = 'Best Of';\n"
+@output_buffer.concat "\t\t\t\tskin['RECOMMENDATIONS_PER_PAGE'] = '10';\n"
+@output_buffer.concat "\t\t\t\tgoogle.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);\n"
+@output_buffer.concat "\t\t\t\tgoogle.friendconnect.container.renderOpenSocialGadget(\n"
+@output_buffer.concat "\t\t\t\t { id: 'div-2899782779156181768',\n"
+@output_buffer.concat "\t\t\t\t   url:'http://www.google.com/friendconnect/gadgets/recommended_pages.xml',\n"
+@output_buffer.concat "\t\t\t\t   site: '11837562349990569265',\n"
+@output_buffer.concat "\t\t\t\t   'view-params':{\"docId\":\"recommendedPages\"}\n"
+@output_buffer.concat "\t\t\t\t },\n"
+@output_buffer.concat "\t\t\t\t  skin);\n"
+@output_buffer.concat "\t\t\t\t</script>\n"
+@output_buffer.concat "\t\t\t\t<br />\n"
+@output_buffer.concat "\t\t\t\t<!-- Include the Google Friend Connect javascript library. -->\n"
+@output_buffer.concat "\t\t\t\t<script type=\"text/javascript\" src=\"http://www.google.com/friendconnect/script/friendconnect.js\"></script>\n"
+@output_buffer.concat "\t\t\t\t<!-- Define the div tag where the gadget will be inserted. -->\n"
+@output_buffer.concat "\t\t\t\t<div id=\"div-4418356423172438252\" style=\"width:250px;border:1px solid #cccccc;\"></div>\n"
+@output_buffer.concat "\t\t\t\t<!-- Render the gadget into a div. -->\n"
+@output_buffer.concat "\t\t\t\t<script type=\"text/javascript\">\n"
+@output_buffer.concat "\t\t\t\tvar skin = {};\n"
+@output_buffer.concat "\t\t\t\tskin['BORDER_COLOR'] = '#cccccc';\n"
+@output_buffer.concat "\t\t\t\tskin['ENDCAP_BG_COLOR'] = '#e1e1e1';\n"
+@output_buffer.concat "\t\t\t\tskin['ENDCAP_TEXT_COLOR'] = '#333333';\n"
+@output_buffer.concat "\t\t\t\tskin['ENDCAP_LINK_COLOR'] = '#824400';\n"
+@output_buffer.concat "\t\t\t\tskin['ALTERNATE_BG_COLOR'] = '#ffffff';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_BG_COLOR'] = '#ffffff';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_LINK_COLOR'] = '#0096cf';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_TEXT_COLOR'] = '#333333';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_SECONDARY_LINK_COLOR'] = '#824400';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_SECONDARY_TEXT_COLOR'] = '#666666';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_HEADLINE_COLOR'] = '#333333';\n"
+@output_buffer.concat "\t\t\t\tskin['DEFAULT_COMMENT_TEXT'] = '- add your comment here -';\n"
+@output_buffer.concat "\t\t\t\tskin['HEADER_TEXT'] = 'Comments';\n"
+@output_buffer.concat "\t\t\t\tskin['POSTS_PER_PAGE'] = '5';\n"
+@output_buffer.concat "\t\t\t\tgoogle.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);\n"
+@output_buffer.concat "\t\t\t\tgoogle.friendconnect.container.renderWallGadget(\n"
+@output_buffer.concat "\t\t\t\t { id: 'div-4418356423172438252',\n"
+@output_buffer.concat "\t\t\t\t   site: '11837562349990569265',\n"
+@output_buffer.concat "\t\t\t\t   'view-params':{\"disableMinMax\":\"true\",\"scope\":\"SITE\",\"features\":\"video,comment\",\"startMaximized\":\"true\"}\n"
+@output_buffer.concat "\t\t\t\t },\n"
+@output_buffer.concat "\t\t\t\t  skin);\n"
+@output_buffer.concat "\t\t\t\t</script>\n"
+@output_buffer.concat "\t\t\t\t<br />\n"
+@output_buffer.concat "\t\t\t\n"
+@output_buffer.concat "\t\t\t\t\n"
+@output_buffer.concat "\t\t\t</div><!--end sidebar div-->\n"
+@output_buffer.concat "\t\t\t\n"
+@output_buffer.concat "\t\t\t\t<div id= \"content\">\n"
+@output_buffer.concat "\t\t\t\t\t<div id=\"notice\">"; @output_buffer.concat(( flash[:notice] ).to_s); @output_buffer.concat "</div>\n"
+@output_buffer.concat "\t\t\t\t\t"; @output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t\t<br/>\n"
+@output_buffer.concat "\t\t\t\t</div>\n"
+@output_buffer.concat "\t\t\t\t\t\n"
+@output_buffer.concat "\t\t\t\n"
+@output_buffer.concat "\t\t\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "</div><!--end container div-->\t\n"
+@output_buffer.concat "<b class=\"nbottom\">\n"
+@output_buffer.concat "  <b class=\"r4\"></b> <b class=\"r3\"></b> <b class=\"r2\"></b> <b class=\"r1\"></b>\n"
+@output_buffer.concat "</b>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "</body>"; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/chrisp/Desktop/EAW/app/views/layouts/application.html.erb:144:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:347:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/chrisp/Desktop/EAW/app/controllers/emails_controller.rb:9:in `index'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/chrisp/Desktop/EAW/app/views/layouts/application.html.erb:18: syntax error, unexpected ':', expecting ')'
+...oncat(( image_tag "logo.jpg" :size => "900x200").to_s); @out...
+                              ^) on line #18 of app/views/layouts/application.html.erb:
+15: 		
+16: 
+17: 	<div id="header">
+18: 		<%= image_tag "logo.jpg" :size => "900x200"%>
+19: 	</div><!--end header div-->		
+20: 			<b class="rtop">
+21: 			  <b class="r1"></b> <b class="r2"></b> <b class="r3"></b> <b class="r4"></b>
+
+    app/views/layouts/application.html.erb:144:in `compile!'
+    app/controllers/emails_controller.rb:9:in `index'
+
+Rendered rescues/_trace (53.7ms)
+Rendered rescues/_request_and_response (30.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-29 11:42:34) [GET]
+  [4;35;1mEmail Load (1.4ms)[0m   [0mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (7.7ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (2.2ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.9ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (2.2ms)
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (2.1ms)
+ERROR: compiling _run_erb_app47views47layouts47application46html46erb RAISED compile error
+/Users/chrisp/Desktop/EAW/app/views/layouts/application.html.erb:18: syntax error, unexpected ':', expecting ')'
+...oncat(( image_tag("logo.jpg" :size => "900x200")).to_s); @ou...
+                              ^
+/Users/chrisp/Desktop/EAW/app/views/layouts/application.html.erb:18: syntax error, unexpected ')', expecting kEND
+...pg" :size => "900x200")).to_s); @output_buffer.concat "\n"
+                              ^
+Function body:           def _run_erb_app47views47layouts47application46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n"
+@output_buffer.concat "       \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n"
+@output_buffer.concat "<head>\n"
+@output_buffer.concat "  <meta http-equiv=\"content-type\" content=\"text/html;charset=UTF-8\" />\n"
+@output_buffer.concat "  "; @output_buffer.concat(( page_title ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  "; @output_buffer.concat(( init_tinymce_hammer_if_required ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  "; @output_buffer.concat(( stylesheet_link_tag 'site.css' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "</head>\n"
+@output_buffer.concat "<body>\n"
+@output_buffer.concat "<div id=\"container\">\n"
+@output_buffer.concat "\t\t\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\t<div id=\"header\">\n"
+@output_buffer.concat "\t\t"; @output_buffer.concat(( image_tag("logo.jpg" :size => "900x200")).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t</div><!--end header div-->\t\t\n"
+@output_buffer.concat "\t\t\t<b class=\"rtop\">\n"
+@output_buffer.concat "\t\t\t  <b class=\"r1\"></b> <b class=\"r2\"></b> <b class=\"r3\"></b> <b class=\"r4\"></b>\n"
+@output_buffer.concat "\t\t\t</b>\n"
+@output_buffer.concat "\t\t\t<div id=\"nav\">\n"
+@output_buffer.concat "\t\t\t\t<div id=\"navlinks\">\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat(( link_to_unless_current "Emails", :controller => 'emails', :action => 'index').to_s); @output_buffer.concat " |\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat(( link_to_unless_current "About", :controller => 'site', :action => 'about').to_s); @output_buffer.concat " |\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat(( link_to_unless_current "Best Of", :controller => 'site', :action => 'bestof').to_s); @output_buffer.concat " |\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat(( link_to_unless_current "Submit an Email", :controller => 'submitemail', :action => 'index').to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t</div>\n"
+@output_buffer.concat "\t\t\t</div><!--end nav div-->\n"
+@output_buffer.concat "\t\t\t<br />\n"
+@output_buffer.concat "\t\t\t<div id=\"sidebar\">\n"
+@output_buffer.concat "\t\t\t\t<br />\n"
+@output_buffer.concat "\t\t\t\t<!-- Include the Google Friend Connect javascript library. -->\n"
+@output_buffer.concat "\t\t\t\t<!-- this is the script for the Members gadget -->\n"
+@output_buffer.concat "\t\t\t\t<script type=\"text/javascript\" src=\"http://www.google.com/friendconnect/script/friendconnect.js\"></script>\n"
+@output_buffer.concat "\t\t\t\t<!-- Define the div tag where the gadget will be inserted. -->\n"
+@output_buffer.concat "\t\t\t\t<div id=\"div-3920466159675450450\" style=\"width:250px;border:1px solid #cccccc;\"></div>\n"
+@output_buffer.concat "\t\t\t\t<!-- Render the gadget into a div. -->\n"
+@output_buffer.concat "\t\t\t\t<script type=\"text/javascript\">\n"
+@output_buffer.concat "\t\t\t\tvar skin = {};\n"
+@output_buffer.concat "\t\t\t\tskin['BORDER_COLOR'] = '#cccccc';\n"
+@output_buffer.concat "\t\t\t\tskin['ENDCAP_BG_COLOR'] = '#e1e1e1';\n"
+@output_buffer.concat "\t\t\t\tskin['ENDCAP_TEXT_COLOR'] = '#4d4e50';\n"
+@output_buffer.concat "\t\t\t\tskin['ENDCAP_LINK_COLOR'] = '#0000cc';\n"
+@output_buffer.concat "\t\t\t\tskin['ALTERNATE_BG_COLOR'] = '#ffffff';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_BG_COLOR'] = '#ffffff';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_LINK_COLOR'] = '#0096cf';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_TEXT_COLOR'] = '#333333';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_SECONDARY_LINK_COLOR'] = '#7777cc';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_SECONDARY_TEXT_COLOR'] = '#666666';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_HEADLINE_COLOR'] = '#333333';\n"
+@output_buffer.concat "\t\t\t\tskin['NUMBER_ROWS'] = '4';\n"
+@output_buffer.concat "\t\t\t\tgoogle.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);\n"
+@output_buffer.concat "\t\t\t\tgoogle.friendconnect.container.renderMembersGadget(\n"
+@output_buffer.concat "\t\t\t\t { id: 'div-3920466159675450450',\n"
+@output_buffer.concat "\t\t\t\t   site: '11837562349990569265' },\n"
+@output_buffer.concat "\t\t\t\t  skin);\n"
+@output_buffer.concat "\t\t\t\t</script>\n"
+@output_buffer.concat "\t\t\t\t<br />\n"
+@output_buffer.concat "\t\t\t\t<!-- Include the Google Friend Connect javascript library. -->\n"
+@output_buffer.concat "\t\t\t\t<!-- This is the script for the Best Of gadget -->\n"
+@output_buffer.concat "\t\t\t\t<script type=\"text/javascript\" src=\"http://www.google.com/friendconnect/script/friendconnect.js\"></script>\n"
+@output_buffer.concat "\t\t\t\t<!-- Define the div tag where the gadget will be inserted. -->\n"
+@output_buffer.concat "\t\t\t\t<div id=\"div-2899782779156181768\" style=\"width:250px;border:1px solid #cccccc;\"></div>\n"
+@output_buffer.concat "\t\t\t\t<!-- Render the gadget into a div. -->\n"
+@output_buffer.concat "\t\t\t\t<script type=\"text/javascript\">\n"
+@output_buffer.concat "\t\t\t\tvar skin = {};\n"
+@output_buffer.concat "\t\t\t\tskin['BORDER_COLOR'] = '#cccccc';\n"
+@output_buffer.concat "\t\t\t\tskin['ENDCAP_BG_COLOR'] = '#e1e1e1';\n"
+@output_buffer.concat "\t\t\t\tskin['ENDCAP_TEXT_COLOR'] = '#4d4e50';\n"
+@output_buffer.concat "\t\t\t\tskin['ENDCAP_LINK_COLOR'] = '#0000cc';\n"
+@output_buffer.concat "\t\t\t\tskin['ALTERNATE_BG_COLOR'] = '#ffffff';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_BG_COLOR'] = '#ffffff';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_LINK_COLOR'] = '#0096cf';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_TEXT_COLOR'] = '#333333';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_SECONDARY_LINK_COLOR'] = '#7777cc';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_SECONDARY_TEXT_COLOR'] = '#666666';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_HEADLINE_COLOR'] = '#333333';\n"
+@output_buffer.concat "\t\t\t\tskin['HEADER_TEXT'] = 'Best Of';\n"
+@output_buffer.concat "\t\t\t\tskin['RECOMMENDATIONS_PER_PAGE'] = '10';\n"
+@output_buffer.concat "\t\t\t\tgoogle.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);\n"
+@output_buffer.concat "\t\t\t\tgoogle.friendconnect.container.renderOpenSocialGadget(\n"
+@output_buffer.concat "\t\t\t\t { id: 'div-2899782779156181768',\n"
+@output_buffer.concat "\t\t\t\t   url:'http://www.google.com/friendconnect/gadgets/recommended_pages.xml',\n"
+@output_buffer.concat "\t\t\t\t   site: '11837562349990569265',\n"
+@output_buffer.concat "\t\t\t\t   'view-params':{\"docId\":\"recommendedPages\"}\n"
+@output_buffer.concat "\t\t\t\t },\n"
+@output_buffer.concat "\t\t\t\t  skin);\n"
+@output_buffer.concat "\t\t\t\t</script>\n"
+@output_buffer.concat "\t\t\t\t<br />\n"
+@output_buffer.concat "\t\t\t\t<!-- Include the Google Friend Connect javascript library. -->\n"
+@output_buffer.concat "\t\t\t\t<script type=\"text/javascript\" src=\"http://www.google.com/friendconnect/script/friendconnect.js\"></script>\n"
+@output_buffer.concat "\t\t\t\t<!-- Define the div tag where the gadget will be inserted. -->\n"
+@output_buffer.concat "\t\t\t\t<div id=\"div-4418356423172438252\" style=\"width:250px;border:1px solid #cccccc;\"></div>\n"
+@output_buffer.concat "\t\t\t\t<!-- Render the gadget into a div. -->\n"
+@output_buffer.concat "\t\t\t\t<script type=\"text/javascript\">\n"
+@output_buffer.concat "\t\t\t\tvar skin = {};\n"
+@output_buffer.concat "\t\t\t\tskin['BORDER_COLOR'] = '#cccccc';\n"
+@output_buffer.concat "\t\t\t\tskin['ENDCAP_BG_COLOR'] = '#e1e1e1';\n"
+@output_buffer.concat "\t\t\t\tskin['ENDCAP_TEXT_COLOR'] = '#333333';\n"
+@output_buffer.concat "\t\t\t\tskin['ENDCAP_LINK_COLOR'] = '#824400';\n"
+@output_buffer.concat "\t\t\t\tskin['ALTERNATE_BG_COLOR'] = '#ffffff';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_BG_COLOR'] = '#ffffff';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_LINK_COLOR'] = '#0096cf';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_TEXT_COLOR'] = '#333333';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_SECONDARY_LINK_COLOR'] = '#824400';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_SECONDARY_TEXT_COLOR'] = '#666666';\n"
+@output_buffer.concat "\t\t\t\tskin['CONTENT_HEADLINE_COLOR'] = '#333333';\n"
+@output_buffer.concat "\t\t\t\tskin['DEFAULT_COMMENT_TEXT'] = '- add your comment here -';\n"
+@output_buffer.concat "\t\t\t\tskin['HEADER_TEXT'] = 'Comments';\n"
+@output_buffer.concat "\t\t\t\tskin['POSTS_PER_PAGE'] = '5';\n"
+@output_buffer.concat "\t\t\t\tgoogle.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);\n"
+@output_buffer.concat "\t\t\t\tgoogle.friendconnect.container.renderWallGadget(\n"
+@output_buffer.concat "\t\t\t\t { id: 'div-4418356423172438252',\n"
+@output_buffer.concat "\t\t\t\t   site: '11837562349990569265',\n"
+@output_buffer.concat "\t\t\t\t   'view-params':{\"disableMinMax\":\"true\",\"scope\":\"SITE\",\"features\":\"video,comment\",\"startMaximized\":\"true\"}\n"
+@output_buffer.concat "\t\t\t\t },\n"
+@output_buffer.concat "\t\t\t\t  skin);\n"
+@output_buffer.concat "\t\t\t\t</script>\n"
+@output_buffer.concat "\t\t\t\t<br />\n"
+@output_buffer.concat "\t\t\t\n"
+@output_buffer.concat "\t\t\t\t\n"
+@output_buffer.concat "\t\t\t</div><!--end sidebar div-->\n"
+@output_buffer.concat "\t\t\t\n"
+@output_buffer.concat "\t\t\t\t<div id= \"content\">\n"
+@output_buffer.concat "\t\t\t\t\t<div id=\"notice\">"; @output_buffer.concat(( flash[:notice] ).to_s); @output_buffer.concat "</div>\n"
+@output_buffer.concat "\t\t\t\t\t"; @output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t\t<br/>\n"
+@output_buffer.concat "\t\t\t\t</div>\n"
+@output_buffer.concat "\t\t\t\t\t\n"
+@output_buffer.concat "\t\t\t\n"
+@output_buffer.concat "\t\t\n"
+@output_buffer.concat "\t\n"
+@output_buffer.concat "</div><!--end container div-->\t\n"
+@output_buffer.concat "<b class=\"nbottom\">\n"
+@output_buffer.concat "  <b class=\"r4\"></b> <b class=\"r3\"></b> <b class=\"r2\"></b> <b class=\"r1\"></b>\n"
+@output_buffer.concat "</b>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "</body>"; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/chrisp/Desktop/EAW/app/views/layouts/application.html.erb:144:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:347:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/chrisp/Desktop/EAW/app/controllers/emails_controller.rb:9:in `index'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/chrisp/Desktop/EAW/app/views/layouts/application.html.erb:18: syntax error, unexpected ':', expecting ')'
+...oncat(( image_tag("logo.jpg" :size => "900x200")).to_s); @ou...
+                              ^
+/Users/chrisp/Desktop/EAW/app/views/layouts/application.html.erb:18: syntax error, unexpected ')', expecting kEND
+...pg" :size => "900x200")).to_s); @output_buffer.concat "\n"
+                              ^) on line #18 of app/views/layouts/application.html.erb:
+15: 		
+16: 
+17: 	<div id="header">
+18: 		<%= image_tag("logo.jpg" :size => "900x200")%>
+19: 	</div><!--end header div-->		
+20: 			<b class="rtop">
+21: 			  <b class="r1"></b> <b class="r2"></b> <b class="r3"></b> <b class="r4"></b>
+
+    app/views/layouts/application.html.erb:144:in `compile!'
+    app/controllers/emails_controller.rb:9:in `index'
+
+Rendered rescues/_trace (42.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-29 11:43:01) [GET]
+  [4;36;1mEmail Load (1.3ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (7.7ms)
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (2.1ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.9ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.9ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (1.9ms)
+Completed in 77ms (View: 68, DB: 3) | 200 OK [http://0.0.0.0/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-29 11:43:18) [GET]
+  [4;35;1mEmail Load (1.4ms)[0m   [0mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (76.5ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (2.1ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (2.0ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (2.0ms)
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (2.5ms)
+Completed in 108ms (View: 99, DB: 3) | 200 OK [http://0.0.0.0/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-29 11:43:34) [GET]
+  [4;36;1mEmail Load (1.6ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (8.1ms)
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (2.4ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (2.2ms)
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (2.0ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (2.0ms)
+Completed in 38ms (View: 28, DB: 3) | 200 OK [http://0.0.0.0/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-29 11:43:45) [GET]
+  [4;35;1mEmail Load (1.3ms)[0m   [0mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (7.4ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (2.0ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.9ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.9ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (1.8ms)
+Completed in 36ms (View: 27, DB: 3) | 200 OK [http://0.0.0.0/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-01-29 11:46:36) [GET]
+  [4;36;1mEmail Load (1.4ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "emails" [0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (7.3ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (2.0ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 3) [0m
+Rendered emails/_email (1.9ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 2) [0m
+Rendered emails/_email (1.8ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (1.8ms)
+Completed in 27ms (View: 18, DB: 3) | 200 OK [http://0.0.0.0/]
