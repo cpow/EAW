@@ -24,6 +24,8 @@ body {
 	padding-right: 10px;
 	padding-left: 10px;
 	padding-bottom: 30px;
+	min-height: 1100px;
+	width: 65%;
 }
 #content h1 {
 	color: #824400;
@@ -73,7 +75,6 @@ body {
 	color: red;
 }
 #post {
-	width: 65%;
 	background: white;
 }
 #postContent {
@@ -117,7 +118,7 @@ body {
 }
 
 fieldset {
-	width: 50%;
+	width: 70%;
 	background: #e1e1e1;
 }
 legend {
