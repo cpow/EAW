@@ -75,7 +75,7 @@ body {
 	color: red;
 }
 #post {
-	background: #e1e1e1;
+	background: #eee9e9;
 }
 #postContent {
 	color: #0096cf;
@@ -100,7 +100,7 @@ body {
 .btop, .bbottom{display:block; background: #FFF;}
 .rtop *, .rbottom *{display: block; height: 1px; overflow: hidden; background: #0096cf;}
 .ntop *, .nbottom *{display: block; height: 1px; overflow: hidden; background: #FFF;}
-.btop *, .bbottom *{display: block; height: 1px; overflow: hidden; background: #e1e1e1;}
+.btop *, .bbottom *{display: block; height: 1px; overflow: hidden; background: #eee9e9;}
 .r1{margin: 0 5px}
 .r2{margin: 0 3px}
 .r3{margin: 0 2px}
