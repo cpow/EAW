@@ -28,17 +28,17 @@ body {
 	width: 65%;
 }
 #content h1 {
-	color: #824400;
+	color: #005B9A;
 	font-size: 14pt;
 	font-weight: bold;
 	font-family: arial;
 }
 #content a:link, #content a:visited {
-	color: #824400;
+	color: #005B9A;
 	border: none;
 }
 #content a:link, #content a:active {
-	color: #824400;
+	color: #005B9A;
 	border: none;
 }
 #content h2 {
@@ -75,7 +75,7 @@ body {
 	color: red;
 }
 #post {
-	background: white;
+	background: #e1e1e1;
 }
 #postContent {
 	color: #0096cf;
@@ -97,8 +97,10 @@ body {
 }
 .rtop, .rbottom{display:block; background: #e1e1e1;}
 .ntop, .nbottom{display:block; background: #e1e1e1;}
+.btop, .bbottom{display:block; background: #FFF;}
 .rtop *, .rbottom *{display: block; height: 1px; overflow: hidden; background: #0096cf;}
 .ntop *, .nbottom *{display: block; height: 1px; overflow: hidden; background: #FFF;}
+.btop *, .bbottom *{display: block; height: 1px; overflow: hidden; background: #e1e1e1;}
 .r1{margin: 0 5px}
 .r2{margin: 0 3px}
 .r3{margin: 0 2px}
