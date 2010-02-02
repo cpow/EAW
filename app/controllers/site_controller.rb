@@ -1,4 +1,7 @@
 class SiteController < ApplicationController
+  
+  before_filter :authenticate, :only => [:admin]
+  
   def about
   end
 
@@ -12,6 +15,9 @@ class SiteController < ApplicationController
   end
 
   def feedback
+  end
+  
+  def admin
   end
 
 end

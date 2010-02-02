@@ -118,6 +118,11 @@ body {
 	color: white;
 	padding: .25em;
 }
+#admin_text {
+	color: #0096cf;
+	font-size: 48pt;
+	width: 900px;
+}
 
 fieldset {
 	width: 70%;

@@ -1,4 +1,11 @@
 class EmailsController < ApplicationController
+  before_filter :authenticate, :except => [:index, :show]
+
+    def emailadmin
+     @emails = Email.all
+    end 
+  
+  
   # GET /emails
   # GET /emails.xml
   def index
@@ -79,9 +86,6 @@ class EmailsController < ApplicationController
     @email = Email.find(params[:id])
     @email.destroy
 
-    respond_to do |format|
-      format.html { redirect_to(emails_url) }
-      format.xml  { head :ok }
-    end
+    redirect_to :controller => 'emails', :action => 'emailadmin'
   end
 end

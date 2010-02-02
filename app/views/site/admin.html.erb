@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <%= page_title %>
+  <%= stylesheet_link_tag 'site' %>
+  <%= javascript_include_tag :defaults%>
+
+</head>
+<html>
+
+<div id="container">
+
+<div id= "admin_text">EAW Admin Section</div><br />
+This is where you can delete, edit, and add new emails, and comments<br /><br />
+
+<h1>Emails</h1>
+<%= link_to "Create a new Email Post", :controller => 'emails', :action => 'new'%> <br />
+<%= link_to "View all Emails as Admin", :controller => 'emails', :action => 'emailadmin' %><br />
+
+<h1>Comments</h1>
+<%= link_to "View all comments as Admin", :controller => 'comments', :action => 'index'%>
+

@@ -52,7 +52,6 @@
 <fieldset id="new_comment" class="">
 	<legend>New Comment</legend>
 	<% form_for [@email, Comment.new] do |f| %>
-		<%= f.error_messages%>
 		Name: <br />
 
 			<%= f.text_field :name %> <br />

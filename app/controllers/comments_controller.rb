@@ -1,4 +1,7 @@
 class CommentsController < ApplicationController
+  
+  before_filter :authenticate, :except => [:create, :new]
+  
   # GET /comments
   # GET /comments.xml
   def index

@@ -1,0 +1,22 @@
+
+	
+<% for email in @emails %>
+<div id="post">
+	<b class="btop">
+	  <b class="r1"></b> <b class="r2"></b> <b class="r3"></b> <b class="r4"></b>
+	</b>
+<h1><%= link_to_unless_current h(email.title), email %></h1>	
+
+	<%= truncate(email.body, :length => 200) %>
+	
+	<b class="bbottom">
+	  <b class="r4"></b> <b class="r3"></b> <b class="r2"></b> <b class="r1"></b>
+	</b>
+	</div>
+<%= link_to 'Delete', email, :confirm => 'Are you sure?', :method => :delete %> |
+<%= link_to 'Edit', edit_email_path(email) %> |
+<%= link_to 'Back to Admin', :controller => 'site', :action => 'admin' %><br /><br />
+
+<% end %>
+	
+	
