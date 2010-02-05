@@ -8633,3 +8633,42 @@ Rendered emails/_email (10.4ms)
   [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
 Rendered emails/_email (11.0ms)
 Completed in 49ms (View: 42, DB: 2) | 200 OK [http://0.0.0.0/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-02-05 14:21:29) [GET]
+  [4;36;1mEmail Load (4.9ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (466.8ms)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (2.5ms)
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (5.2ms)
+Completed in 712ms (View: 700, DB: 6) | 200 OK [http://0.0.0.0/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-02-05 14:21:44) [GET]
+  [4;36;1mEmail Load (1.3ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (8.8ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (2.2ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (2.1ms)
+Completed in 37ms (View: 29, DB: 2) | 200 OK [http://0.0.0.0/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-02-05 14:22:13) [GET]
+  [4;36;1mEmail Load (1.5ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering emails/index
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 5) [0m
+Rendered emails/_email (9.0ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 4) [0m
+Rendered emails/_email (62.8ms)
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "comments" WHERE ("comments".email_id = 1) [0m
+Rendered emails/_email (2.6ms)
+Completed in 96ms (View: 88, DB: 2) | 200 OK [http://0.0.0.0/]
