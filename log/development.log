@@ -8971,3 +8971,27 @@ Processing SiteController#about (for 127.0.0.1 at 2010-02-08 14:50:05) [GET]
 Rendering template within layouts/application
 Rendering site/about
 Completed in 12ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/site/about]
+
+
+Processing SiteController#submit (for 127.0.0.1 at 2010-02-08 15:00:38) [GET]
+Rendering template within layouts/application
+Rendering site/submit
+Completed in 31ms (View: 29, DB: 0) | 200 OK [http://0.0.0.0/site/submit]
+
+
+Processing SiteController#about (for 127.0.0.1 at 2010-02-08 15:00:41) [GET]
+Rendering template within layouts/application
+Rendering site/about
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/site/about]
+
+
+Processing SubmitemailController#index (for 127.0.0.1 at 2010-02-08 15:00:43) [GET]
+Rendering template within layouts/application
+Rendering submitemail/index
+Completed in 20ms (View: 18, DB: 0) | 200 OK [http://0.0.0.0/submitemail]
+
+
+Processing SiteController#bestof (for 127.0.0.1 at 2010-02-08 15:01:52) [GET]
+Rendering template within layouts/application
+Rendering site/bestof
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://0.0.0.0/site/bestof]
