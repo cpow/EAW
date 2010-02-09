@@ -48,8 +48,7 @@ body {
 	color: #4d4e50;
 	font-size: 12pt;
 	font-family: arial;
-	font-weight: bold;
-	
+	font-weight: bold;	
 }
 #sidebar {
 	float: right;
@@ -79,13 +78,16 @@ body {
 	color:#4d4e50;
 	font-weight: bold;
 }
-#botlinks q, #botlinks a:visited {
+#botlinks a, #botlinks a:visited {
+	color: #4d4e50;
+	text-decoration: none;
+}
+#botlinks a. #botlinks a:active {
 	color: #4d4e50;
 	text-decoration: none;
 }
 #botlinks a:hover {
 	color: #005B9A;
-	
 }
 #notice {
 	color: #00A8CC;
@@ -100,7 +102,6 @@ body {
 	color: #0096cf;
 	font-size: 10pt;
 }
-
 #comments strong {
 	color: #0096cf;
 	font-size: 8pt;
