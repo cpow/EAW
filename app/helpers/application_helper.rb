@@ -17,7 +17,7 @@ module ApplicationHelper
     end
     
     def snippet(thought) 
-    wordcount = 80 
+    wordcount = 76 
     thought.split[0..(wordcount-1)].join(" ") + (thought.split.size > wordcount ? "..." : "") 
     end
 end
