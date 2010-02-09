@@ -5,14 +5,15 @@
 
 <h1><%= link_to_unless_current h(email.title), email %></h1>	
 
-	<%= truncate(email.body, :length => 500) %>
+	<%= snippet(email.body) %>
 	
 	<b class="bbottom">
 	  <b class="r4"></b> <b class="r3"></b> <b class="r2"></b> <b class="r1"></b>
 	</b>
+	
 	</div>
 		
-		<div id="postContent">
+		<div id="postcontent">
 			
 				
 			Posted <%= email.created_at.strftime("%A, %b %d")%> <br />
@@ -20,7 +21,9 @@
 			<% link_to(email) do %>
 			<%= email.comments.count%> comments
 			<%end%>
+			
 			</div>
+			
 			<br />
 			
 

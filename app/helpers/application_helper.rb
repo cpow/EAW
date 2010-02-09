@@ -14,5 +14,10 @@ module ApplicationHelper
     def page_title
         title = @page_title ? "| #{@page_title}" : ' '
         %(<title>Emails at Work #{title}</title>)
-      end
+    end
+    
+    def snippet(thought) 
+    wordcount = 80 
+    thought.split[0..(wordcount-1)].join(" ") + (thought.split.size > wordcount ? "..." : "") 
+    end
 end
