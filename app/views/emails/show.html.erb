@@ -35,16 +35,15 @@
 		 },
 		  skin);
 		</script>
-	</div><br /><br /><br /><br /><br /><br />
-	<a name="fb_share" type="box_count" href="http://www.facebook.com/sharer.php">Share</a><script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
+	</div><br /><br /><br /><br /><br /><br />	
 	
-	
-	<br /><br /><br /><br /><br />
-	Posted <%= @email.created_at.strftime("%A, %b %d")%> <br />
+	<br /><br />
+	Posted <%= @email.created_at.strftime("%A, %b %d")%> <br />		
 		
+		<!-- Include the Google Friend Connect javascript library. -->
 		<script type="text/javascript" src="http://www.google.com/friendconnect/script/friendconnect.js"></script>
 		<!-- Define the div tag where the gadget will be inserted. -->
-		<div id="div-4418356423172438252" style="width:350px;border:1px solid #cccccc;"></div>
+		<div id="div-7873826768687130446" style="width:300px;border:1px solid #cccccc;"></div>
 		<!-- Render the gadget into a div. -->
 		<script type="text/javascript">
 		var skin = {};
@@ -64,10 +63,10 @@
 		skin['POSTS_PER_PAGE'] = '15';
 		google.friendconnect.container.setParentUrl('/' /* location of rpc_relay.html and canvas.html */);
 		google.friendconnect.container.renderWallGadget(
-		 { id: 'div-4418356423172438252',
+		 { id: 'div-7873826768687130446',
 		   site: '16626855374335815996',
-		   'view-params':{"disableMinMax":"true","scope":"SITE","features":"video,comment","startMaximized":"true"}
+		   'view-params':{"disableMinMax":"true","scope":"PAGE","features":"video,comment","startMaximized":"true"}
 		 },
 		  skin);
 		</script>
-		<br />
+		

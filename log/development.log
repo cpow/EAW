@@ -9724,3 +9724,37 @@ Processing EmailsController#show (for 127.0.0.1 at 2010-02-10 14:35:53) [GET]
 Rendering template within layouts/application
 Rendering emails/show
 Completed in 19ms (View: 12, DB: 0) | 200 OK [http://0.0.0.0/emails/5]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-02-10 14:39:46) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mEmail Load (0.3ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering emails/show
+Completed in 20ms (View: 13, DB: 0) | 200 OK [http://0.0.0.0/emails/5]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-02-10 14:39:48) [GET]
+  [4;36;1mEmail Load (1.2ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (4.5ms)
+Rendered emails/_email (1.2ms)
+Rendered emails/_email (1.0ms)
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://0.0.0.0/emails]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-02-10 14:39:50) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mEmail Load (0.3ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering emails/show
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://0.0.0.0/emails/5]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-02-10 14:40:04) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mEmail Load (0.3ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering emails/show
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://0.0.0.0/emails/5]
