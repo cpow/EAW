@@ -9758,3 +9758,11 @@ Processing EmailsController#show (for 127.0.0.1 at 2010-02-10 14:40:04) [GET]
 Rendering template within layouts/application
 Rendering emails/show
 Completed in 13ms (View: 7, DB: 0) | 200 OK [http://0.0.0.0/emails/5]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-02-10 14:44:13) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mEmail Load (0.3ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering emails/show
+Completed in 21ms (View: 14, DB: 0) | 200 OK [http://0.0.0.0/emails/5]
