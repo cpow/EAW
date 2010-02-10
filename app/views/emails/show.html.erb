@@ -4,11 +4,11 @@
 	<%= @email.body %>
 
 
-	<div id="postcontent">
+	<div id="postcontent"><br />
 	
 		
 		
-		
+		Posted <%= @email.created_at.strftime("%A, %b %d")%> <br />	<br />
 		<div id="button">
 		<!-- Include the Google Friend Connect javascript library. -->
 		<script type="text/javascript" src="http://www.google.com/friendconnect/script/friendconnect.js"></script>
@@ -38,7 +38,7 @@
 	</div><br /><br /><br /><br /><br /><br />	
 	
 	<br /><br />
-	Posted <%= @email.created_at.strftime("%A, %b %d")%> <br />		
+	
 		
 		<!-- Include the Google Friend Connect javascript library. -->
 		<script type="text/javascript" src="http://www.google.com/friendconnect/script/friendconnect.js"></script>
