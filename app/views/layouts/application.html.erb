@@ -7,6 +7,7 @@
   <%= page_title %>
   <%= init_tinymce_hammer_if_required %>
   <%= stylesheet_link_tag 'site.css' %>
+  <%= auto_discovery_link_tag :atom, formatted_emails_path(:atom)%>
   <link rel="shortcut icon" href="/favicon.ico" />
 
 <meta name="description" content="Emails at Work: Sent a funny or embarrassing email from work lately? It's probably here." />

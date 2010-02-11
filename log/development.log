@@ -9808,3 +9808,215 @@ Processing SiteController#about (for 127.0.0.1 at 2010-02-11 11:25:20) [GET]
 Rendering template within layouts/application
 Rendering site/about
 Completed in 13ms (View: 11, DB: 0) | 200 OK [http://0.0.0.0/site/about]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-02-11 12:53:24) [GET]
+  [4;36;1mEmail Load (2.7ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (266.9ms)
+Rendered emails/_email (1.0ms)
+Rendered emails/_email (0.8ms)
+
+ActionView::TemplateError (undefined method `formatted_posts_path' for #<ActionView::Base:0x2528bd4>) on line #10 of app/views/layouts/application.html.erb:
+7:   <%= page_title %>
+8:   <%= init_tinymce_hammer_if_required %>
+9:   <%= stylesheet_link_tag 'site.css' %>
+10:   <%= auto_discovery_link_tag :atom, formatted_posts_path(:atom)%>
+11:   <link rel="shortcut icon" href="/favicon.ico" />
+12: 
+13: <meta name="description" content="Emails at Work: Sent a funny or embarrassing email from work lately? It's probably here." />
+
+    app/views/layouts/application.html.erb:10
+    app/controllers/emails_controller.rb:16:in `index'
+
+Rendered rescues/_trace (140.7ms)
+Rendered rescues/_request_and_response (35.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-02-11 12:53:36) [GET]
+  [4;35;1mEmail Load (1.5ms)[0m   [0mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (3.2ms)
+Rendered emails/_email (0.8ms)
+Rendered emails/_email (1.2ms)
+DEPRECATION WARNING: formatted_emails_path() has been deprecated. Please pass format to the standard emails_path method instead.. (called from _run_erb_app47views47layouts47application46html46erb at /Users/chrisp/Desktop/EAW/app/views/layouts/application.html.erb:10)
+Completed in 35ms (View: 27, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-02-11 12:53:55) [GET]
+  [4;36;1mEmail Load (1.2ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (2.6ms)
+Rendered emails/_email (0.7ms)
+Rendered emails/_email (1.0ms)
+DEPRECATION WARNING: formatted_emails_path() has been deprecated. Please pass format to the standard emails_path method instead.. (called from _run_erb_app47views47layouts47application46html46erb at /Users/chrisp/Desktop/EAW/app/views/layouts/application.html.erb:10)
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing EmailsController#index to atom (for 127.0.0.1 at 2010-02-11 12:53:56) [GET]
+  [4;35;1mEmail Load (1.3ms)[0m   [0mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering emails/index
+
+ActionView::TemplateError (wrong number of arguments (1 for 0)) on line #8 of app/views/emails/index.atom.builder:
+5:   @emails.each do |email|
+6:     feed.entry(email) do |entry|
+7:       entry.title(email.title)
+8:       entry.content(email.body :type => 'html')
+9:       entry.author { |author| author.name("Emails at Work")}
+10:     end
+11:   end
+
+    app/views/emails/index.atom.builder:8:in `body'
+    app/views/emails/index.atom.builder:8:in `_run_builder_app47views47emails47index46atom46builder'
+    app/views/emails/index.atom.builder:6:in `_run_builder_app47views47emails47index46atom46builder'
+    app/views/emails/index.atom.builder:5:in `each'
+    app/views/emails/index.atom.builder:5:in `_run_builder_app47views47emails47index46atom46builder'
+    app/views/emails/index.atom.builder:1:in `_run_builder_app47views47emails47index46atom46builder'
+    app/controllers/emails_controller.rb:16:in `index'
+
+Rendered rescues/_trace (255.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#index to atom (for 127.0.0.1 at 2010-02-11 12:54:00) [GET]
+  [4;36;1mEmail Load (1.1ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering emails/index
+
+ActionView::TemplateError (wrong number of arguments (1 for 0)) on line #8 of app/views/emails/index.atom.builder:
+5:   @emails.each do |email|
+6:     feed.entry(email) do |entry|
+7:       entry.title(email.title)
+8:       entry.content(email.body :type => 'html')
+9:       entry.author { |author| author.name("Emails at Work")}
+10:     end
+11:   end
+
+    app/views/emails/index.atom.builder:8:in `body'
+    app/views/emails/index.atom.builder:8:in `_run_builder_app47views47emails47index46atom46builder'
+    app/views/emails/index.atom.builder:6:in `_run_builder_app47views47emails47index46atom46builder'
+    app/views/emails/index.atom.builder:5:in `each'
+    app/views/emails/index.atom.builder:5:in `_run_builder_app47views47emails47index46atom46builder'
+    app/views/emails/index.atom.builder:1:in `_run_builder_app47views47emails47index46atom46builder'
+    app/controllers/emails_controller.rb:16:in `index'
+
+Rendered rescues/_trace (56.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-02-11 12:55:22) [GET]
+  [4;35;1mEmail Load (1.1ms)[0m   [0mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (2.7ms)
+Rendered emails/_email (0.7ms)
+Rendered emails/_email (0.7ms)
+DEPRECATION WARNING: formatted_emails_path() has been deprecated. Please pass format to the standard emails_path method instead.. (called from _run_erb_app47views47layouts47application46html46erb at /Users/chrisp/Desktop/EAW/app/views/layouts/application.html.erb:10)
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-02-11 12:55:29) [GET]
+  [4;36;1mEmail Load (1.6ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (2.7ms)
+Rendered emails/_email (0.7ms)
+Rendered emails/_email (0.7ms)
+DEPRECATION WARNING: formatted_emails_path() has been deprecated. Please pass format to the standard emails_path method instead.. (called from _run_erb_app47views47layouts47application46html46erb at /Users/chrisp/Desktop/EAW/app/views/layouts/application.html.erb:10)
+Completed in 20ms (View: 11, DB: 2) | 200 OK [http://0.0.0.0/]
+
+
+Processing EmailsController#index to atom (for 127.0.0.1 at 2010-02-11 12:55:29) [GET]
+  [4;35;1mEmail Load (1.7ms)[0m   [0mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering emails/index
+Completed in 105ms (View: 98, DB: 2) | 200 OK [http://0.0.0.0/emails.atom]
+
+
+Processing EmailsController#index to atom (for 127.0.0.1 at 2010-02-11 12:56:47) [GET]
+  [4;36;1mEmail Load (1.3ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering emails/index
+Completed in 22ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/emails.atom]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-02-11 12:56:48) [GET]
+  [4;35;1mEmail Load (1.2ms)[0m   [0mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (3.1ms)
+Rendered emails/_email (0.8ms)
+Rendered emails/_email (0.8ms)
+DEPRECATION WARNING: formatted_emails_path() has been deprecated. Please pass format to the standard emails_path method instead.. (called from _run_erb_app47views47layouts47application46html46erb at /Users/chrisp/Desktop/EAW/app/views/layouts/application.html.erb:10)
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing EmailsController#index to atom (for 127.0.0.1 at 2010-02-11 12:57:17) [GET]
+  [4;36;1mEmail Load (1.1ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering emails/index
+Completed in 20ms (View: 14, DB: 1) | 200 OK [http://0.0.0.0/emails.atom]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-02-11 12:57:17) [GET]
+  [4;35;1mEmail Load (1.2ms)[0m   [0mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (2.9ms)
+Rendered emails/_email (0.9ms)
+Rendered emails/_email (0.8ms)
+DEPRECATION WARNING: formatted_emails_path() has been deprecated. Please pass format to the standard emails_path method instead.. (called from _run_erb_app47views47layouts47application46html46erb at /Users/chrisp/Desktop/EAW/app/views/layouts/application.html.erb:10)
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing EmailsController#index to atom (for 127.0.0.1 at 2010-02-11 12:57:54) [GET]
+  [4;36;1mEmail Load (1.2ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering emails/index
+Completed in 22ms (View: 15, DB: 1) | 200 OK [http://0.0.0.0/emails.atom]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-02-11 12:57:54) [GET]
+  [4;35;1mEmail Load (1.3ms)[0m   [0mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (8.6ms)
+Rendered emails/_email (0.7ms)
+Rendered emails/_email (0.7ms)
+DEPRECATION WARNING: formatted_emails_path() has been deprecated. Please pass format to the standard emails_path method instead.. (called from _run_erb_app47views47layouts47application46html46erb at /Users/chrisp/Desktop/EAW/app/views/layouts/application.html.erb:10)
+Completed in 54ms (View: 23, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing EmailsController#index to atom (for 127.0.0.1 at 2010-02-11 12:58:58) [GET]
+  [4;36;1mEmail Load (1.1ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering emails/index
+Completed in 95ms (View: 89, DB: 1) | 200 OK [http://0.0.0.0/emails.atom]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-02-11 12:58:58) [GET]
+  [4;35;1mEmail Load (1.3ms)[0m   [0mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (3.0ms)
+Rendered emails/_email (0.8ms)
+Rendered emails/_email (0.8ms)
+DEPRECATION WARNING: formatted_emails_path() has been deprecated. Please pass format to the standard emails_path method instead.. (called from _run_erb_app47views47layouts47application46html46erb at /Users/chrisp/Desktop/EAW/app/views/layouts/application.html.erb:10)
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing EmailsController#index to atom (for 127.0.0.1 at 2010-02-11 13:00:57) [GET]
+  [4;36;1mEmail Load (1.6ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering emails/index
+Completed in 20ms (View: 14, DB: 2) | 200 OK [http://0.0.0.0/emails.atom]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-02-11 13:00:57) [GET]
+  [4;35;1mEmail Load (1.2ms)[0m   [0mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (3.3ms)
+Rendered emails/_email (0.9ms)
+Rendered emails/_email (0.8ms)
+DEPRECATION WARNING: formatted_emails_path() has been deprecated. Please pass format to the standard emails_path method instead.. (called from _run_erb_app47views47layouts47application46html46erb at /Users/chrisp/Desktop/EAW/app/views/layouts/application.html.erb:10)
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://0.0.0.0/]
