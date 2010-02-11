@@ -30,6 +30,9 @@ body {
 	min-height: 1100px;
 	width: 65%;
 }
+#tabbedcontent {
+	margin-left: 24px;
+}
 #content h1 {
 	color: #005B9A;
 	font-size: 12pt;
@@ -46,7 +49,7 @@ body {
 }
 #content h2 {
 	color: #4d4e50;
-	font-size: 12pt;
+	font-size: 11pt;
 	font-family: arial;
 	font-weight: bold;	
 }
