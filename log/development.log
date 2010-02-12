@@ -10020,3 +10020,59 @@ Rendered emails/_email (0.9ms)
 Rendered emails/_email (0.8ms)
 DEPRECATION WARNING: formatted_emails_path() has been deprecated. Please pass format to the standard emails_path method instead.. (called from _run_erb_app47views47layouts47application46html46erb at /Users/chrisp/Desktop/EAW/app/views/layouts/application.html.erb:10)
 Completed in 18ms (View: 12, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-02-12 14:25:35) [GET]
+  [4;36;1mEmail Load (1.5ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (176.3ms)
+Rendered emails/_email (1.0ms)
+Rendered emails/_email (0.7ms)
+DEPRECATION WARNING: formatted_emails_path() has been deprecated. Please pass format to the standard emails_path method instead.. (called from _run_erb_app47views47layouts47application46html46erb at /Users/chrisp/Desktop/EAW/app/views/layouts/application.html.erb:10)
+Completed in 763ms (View: 755, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-02-12 14:25:39) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mEmail Load (0.3ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering emails/show
+DEPRECATION WARNING: formatted_emails_path() has been deprecated. Please pass format to the standard emails_path method instead.. (called from _run_erb_app47views47layouts47application46html46erb at /Users/chrisp/Desktop/EAW/app/views/layouts/application.html.erb:10)
+Completed in 24ms (View: 16, DB: 0) | 200 OK [http://0.0.0.0/emails/5]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-02-12 14:26:08) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mEmail Load (0.3ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering emails/show
+DEPRECATION WARNING: formatted_emails_path() has been deprecated. Please pass format to the standard emails_path method instead.. (called from _run_erb_app47views47layouts47application46html46erb at /Users/chrisp/Desktop/EAW/app/views/layouts/application.html.erb:10)
+Completed in 23ms (View: 16, DB: 0) | 200 OK [http://0.0.0.0/emails/5]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-02-12 14:26:22) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mEmail Load (0.3ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering emails/show
+DEPRECATION WARNING: formatted_emails_path() has been deprecated. Please pass format to the standard emails_path method instead.. (called from _run_erb_app47views47layouts47application46html46erb at /Users/chrisp/Desktop/EAW/app/views/layouts/application.html.erb:10)
+Completed in 87ms (View: 79, DB: 0) | 200 OK [http://0.0.0.0/emails/5]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-02-12 14:26:36) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mEmail Load (0.3ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering emails/show
+DEPRECATION WARNING: formatted_emails_path() has been deprecated. Please pass format to the standard emails_path method instead.. (called from _run_erb_app47views47layouts47application46html46erb at /Users/chrisp/Desktop/EAW/app/views/layouts/application.html.erb:10)
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://0.0.0.0/emails/5]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-02-12 14:26:49) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mEmail Load (0.3ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering emails/show
+DEPRECATION WARNING: formatted_emails_path() has been deprecated. Please pass format to the standard emails_path method instead.. (called from _run_erb_app47views47layouts47application46html46erb at /Users/chrisp/Desktop/EAW/app/views/layouts/application.html.erb:10)
+Completed in 24ms (View: 15, DB: 0) | 200 OK [http://0.0.0.0/emails/5]
