@@ -121,6 +121,9 @@ body {
 #post {
 	background: #ebebeb;
 }
+#posttext {
+	padding-left: 10px;
+}
 #postcontent {
 	color: #0096cf;
 	font-size: 10pt;

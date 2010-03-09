@@ -2,10 +2,12 @@
 	<b class="btop">
 	  <b class="r1"></b> <b class="r2"></b> <b class="r3"></b> <b class="r4"></b>
 	</b>
+	<div id="posttext">
 
 <h1><%= link_to_unless_current h(email.title), email %></h1>	
 
 	<%= snippet(email.body) %>
+		</div>
 	
 	<b class="bbottom">
 	  <b class="r4"></b> <b class="r3"></b> <b class="r2"></b> <b class="r1"></b>
