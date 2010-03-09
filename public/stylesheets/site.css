@@ -17,11 +17,7 @@ body {
 }
 #headerbot {
 	font-size: 10pt;
-	padding-left: 10px;
-	color: #4d4e50;
-	background: #ebe9e1;
-	font-weight: bold;
-	padding-bottom: 5px;
+	padding-bottom: 20px;
 }
 #header a:link, #header a:visited {
 	color: #4d4e50;
@@ -33,6 +29,12 @@ body {
 }
 #header a:hover {
 	color: #005B9A;
+	width: 400px;
+}
+#topadd {
+	float: right;
+	width: 470px;
+	padding-bottom: 0;
 }
 #container {
 	text-align: left;
