@@ -10497,3 +10497,36 @@ Rendered emails/_email (0.9ms)
 Rendered emails/_email (1.5ms)
 DEPRECATION WARNING: formatted_emails_path() has been deprecated. Please pass format to the standard emails_path method instead.. (called from _run_erb_app47views47layouts47application46html46erb at /Users/chrisp/Desktop/EAW/app/views/layouts/application.html.erb:10)
 Completed in 27ms (View: 15, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-03-09 14:33:12) [GET]
+  [4;36;1mEmail Load (1.5ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (158.9ms)
+Rendered emails/_email (1.0ms)
+Rendered emails/_email (0.8ms)
+DEPRECATION WARNING: formatted_emails_path() has been deprecated. Please pass format to the standard emails_path method instead.. (called from _run_erb_app47views47layouts47application46html46erb at /Users/chrisp/Desktop/EAW/app/views/layouts/application.html.erb:10)
+Completed in 196ms (View: 189, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-03-09 14:33:55) [GET]
+  [4;35;1mEmail Load (1.2ms)[0m   [0mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (2.7ms)
+Rendered emails/_email (0.7ms)
+Rendered emails/_email (0.8ms)
+DEPRECATION WARNING: formatted_emails_path() has been deprecated. Please pass format to the standard emails_path method instead.. (called from _run_erb_app47views47layouts47application46html46erb at /Users/chrisp/Desktop/EAW/app/views/layouts/application.html.erb:10)
+Completed in 17ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-03-09 14:34:02) [GET]
+  [4;36;1mEmail Load (1.2ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (2.9ms)
+Rendered emails/_email (0.8ms)
+Rendered emails/_email (0.8ms)
+DEPRECATION WARNING: formatted_emails_path() has been deprecated. Please pass format to the standard emails_path method instead.. (called from _run_erb_app47views47layouts47application46html46erb at /Users/chrisp/Desktop/EAW/app/views/layouts/application.html.erb:10)
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/emails]
