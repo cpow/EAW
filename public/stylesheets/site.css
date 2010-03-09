@@ -9,11 +9,30 @@ body {
 }
 #header {
 	font-size: 24pt;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	text-align: center;
+	padding-left: 10px;
 	color: #4d4e50;
 	background: #ebe9e1;
+	font-weight: bold;
+	padding-top: 20px;
+}
+#headerbot {
+	font-size: 10pt;
+	padding-left: 10px;
+	color: #4d4e50;
+	background: #ebe9e1;
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+#header a:link, #header a:visited {
+	color: #4d4e50;
+	text-decoration: none;
+}
+#header a:link, #header a:active {
+	color: #4d4e50;
+	text-decoration: none;
+}
+#header a:hover {
+	color: #005B9A;
 }
 #container {
 	text-align: left;
@@ -61,6 +80,7 @@ body {
 #nav {
 	color: #e1e1e1;
 	background: #0096cf;
+	text-align: right;
 	font-size: 11pt;
 	font-weight: bold;
 	padding: 0.5em;

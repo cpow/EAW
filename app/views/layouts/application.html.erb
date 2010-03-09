@@ -29,8 +29,11 @@ pageTracker._trackPageview();
 <body>
 <div id="container">
 	<div id="header">
-		<%= link_to_unless_current image_tag("emails.jpg", :border => 0), :controller => "emails", :action => "index"%><br />
-	</div><!--end header div-->		
+		<%= link_to_unless_current "EmailsAtWork", :controller => 'emails', :action => 'index'%>
+	</div><!--end header div-->	
+	<div id="headerbot">
+		Funny emails to keep bored people entertained...
+	</div>	
 			<b class="rtop">
 			  <b class="r1"></b> <b class="r2"></b> <b class="r3"></b> <b class="r4"></b>
 			</b>
