@@ -16,6 +16,18 @@ module ApplicationHelper
         %(<title>Emails at Work #{title}</title>)
     end
     
+    def meta(name, content)
+      %(<meta name = "#{name}" content = "#{content}" />)
+    end
+    
+    def meta_description
+      if @email and !@email.new_record?
+        "Funny email from work: #{@email.title}"
+      else
+        "Read a funny email from work today? It probably came from here..."
+      end
+    end
+    
     def snippet(thought) 
     wordcount = 76 
     thought.split[0..(wordcount-1)].join(" ") + (thought.split.size > wordcount ? "..." : "") 

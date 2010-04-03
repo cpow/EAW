@@ -5,6 +5,9 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <%= page_title %>
+  <%= meta "description", meta_description %>
+
+
   <%= init_tinymce_hammer_if_required %>
   <%= stylesheet_link_tag 'site.css' %>
   <%= auto_discovery_link_tag :atom, formatted_emails_path(:atom)%>

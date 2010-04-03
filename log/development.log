@@ -10618,3 +10618,171 @@ Rendered emails/_email (0.9ms)
 Rendered emails/_email (0.8ms)
 DEPRECATION WARNING: formatted_emails_path() has been deprecated. Please pass format to the standard emails_path method instead.. (called from _run_erb_app47views47layouts47application46html46erb at /Users/chrisp/Desktop/EAW/app/views/layouts/application.html.erb:10)
 Completed in 29ms (View: 21, DB: 1) | 200 OK [http://0.0.0.0/]
+/!\ FAILSAFE /!\  Fri Apr 02 21:41:46 -0400 2010
+  Status: 500 Internal Server Error
+  /Users/cpow/Desktop/EAW/app/helpers/application_helper.rb:34: syntax error, unexpected $end, expecting kEND
+    /Users/cpow/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/cpow/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/cpow/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/cpow/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/cpow/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/cpow/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+    /Users/cpow/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+    /Users/cpow/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/helpers.rb:197:in `default_helper_module!'
+    /Users/cpow/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/helpers.rb:212:in `__send__'
+    /Users/cpow/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/helpers.rb:212:in `inherited'
+    /Users/cpow/Desktop/EAW/app/controllers/application_controller.rb:4
+    /Users/cpow/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/cpow/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/cpow/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/cpow/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/cpow/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/cpow/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Users/cpow/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/cpow/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Users/cpow/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:89:in `dispatch'
+    /Users/cpow/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+    /Users/cpow/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+    /Users/cpow/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/cpow/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/cpow/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    /Users/cpow/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+    /Users/cpow/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+    /opt/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /Users/cpow/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /opt/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Users/cpow/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Fri Apr 02 21:41:49 -0400 2010
+  Status: 500 Internal Server Error
+  /Users/cpow/Desktop/EAW/app/helpers/application_helper.rb:34: syntax error, unexpected $end, expecting kEND
+    /Users/cpow/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/cpow/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/cpow/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/cpow/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/cpow/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/cpow/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+    /Users/cpow/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+    /Users/cpow/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/helpers.rb:197:in `default_helper_module!'
+    /Users/cpow/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/helpers.rb:212:in `__send__'
+    /Users/cpow/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/helpers.rb:212:in `inherited'
+    /Users/cpow/Desktop/EAW/app/controllers/application_controller.rb:4
+    /Users/cpow/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/cpow/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/cpow/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/cpow/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/cpow/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/cpow/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Users/cpow/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/cpow/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Users/cpow/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:89:in `dispatch'
+    /Users/cpow/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+    /Users/cpow/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+    /Users/cpow/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/cpow/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/cpow/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    /Users/cpow/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+    /Users/cpow/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+    /opt/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /Users/cpow/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /opt/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+    /Users/cpow/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Users/cpow/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+    /opt/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Processing EmailsController#index (for 127.0.0.1 at 2010-04-02 21:42:15) [GET]
+  [4;36;1mEmail Load (1.2ms)[0m   [0;1mSELECT * FROM "emails" ORDER BY created_at DESC LIMIT 8 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering emails/index
+Rendered emails/_email (233.0ms)
+Rendered emails/_email (0.9ms)
+Rendered emails/_email (0.7ms)
+DEPRECATION WARNING: formatted_emails_path() has been deprecated. Please pass format to the standard emails_path method instead.. (called from _run_erb_app47views47layouts47application46html46erb at /Users/cpow/Desktop/EAW/app/views/layouts/application.html.erb:13)
+Completed in 350ms (View: 344, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-04-02 21:42:53) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering emails/show
+DEPRECATION WARNING: formatted_emails_path() has been deprecated. Please pass format to the standard emails_path method instead.. (called from _run_erb_app47views47layouts47application46html46erb at /Users/cpow/Desktop/EAW/app/views/layouts/application.html.erb:13)
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://0.0.0.0/emails/5]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-04-02 21:44:23) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mEmail Load (0.2ms)[0m   [0;1mSELECT * FROM "emails" WHERE ("emails"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering emails/show
+DEPRECATION WARNING: formatted_emails_path() has been deprecated. Please pass format to the standard emails_path method instead.. (called from _run_erb_app47views47layouts47application46html46erb at /Users/cpow/Desktop/EAW/app/views/layouts/application.html.erb:13)
+Completed in 49ms (View: 6, DB: 0) | 200 OK [http://0.0.0.0/emails/5]
+
+
+Processing EmailsController#show (for 127.0.0.1 at 2010-04-02 21:45:51) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mEmail Load (0.2ms)[0m   [0mSELECT * FROM "emails" WHERE ("emails"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering emails/show
+DEPRECATION WARNING: formatted_emails_path() has been deprecated. Please pass format to the standard emails_path method instead.. (called from _run_erb_app47views47layouts47application46html46erb at /Users/cpow/Desktop/EAW/app/views/layouts/application.html.erb:13)
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://0.0.0.0/emails/5]
